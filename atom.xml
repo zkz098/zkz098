@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.kaitaku.xyz</id>
+    <title>Yume shoka</title>
+    <subtitle>kaitakuの博客</subtitle>
+    <icon>https://www.kaitaku.xyz/images/favicon.ico</icon>
+    <link href="https://www.kaitaku.xyz" />
+    <author>
+      <name>chou kaitaku</name>
+    </author>
+    <updated>2022-01-11T08:24:23.000Z</updated>
+    <entry>
+        <id>https://www.kaitaku.xyz/2022/01/11/pythone2/</id>
+        <title>python教程-小白篇2</title>
+        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/11/pythone2/"/>
+        <content type="html">&lt;h1 id=&#34;输出一段文字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输出一段文字&#34;&gt;#&lt;/a&gt; 输出一段文字&lt;/h1&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;PyCharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello world&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;print 为输出函数，会将括号内的值输出 &lt;br /&gt;
+&amp;quot;hello world&amp;quot; 为传入的值，类型为字符串 &lt;br /&gt;
+字符串内可以存储绝大部分文本 &lt;br /&gt;
+python 的字符串可以用双引号或单引号括起来&lt;br /&gt;
+行末不需要分号或逗号，但这样也可以:&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;PyCharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;b&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;python中的变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python中的变量&#34;&gt;#&lt;/a&gt; python 中的变量&lt;/h1&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;PyCharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;This is a word&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 输出值为: This is a word&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在本段代码中 &amp;quot;a&amp;quot; 即为变量 &lt;br /&gt;
+python 中的变量不需要提前声明类型，需要时定义即可 &lt;br /&gt;
+赋值语法：变量名 = 值 &lt;br /&gt;
+变量名规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不可以以数字开头，例如 5count 就是错误的&lt;/li&gt;
+&lt;li&gt;只能有字母、数字和下划线，例如 a#b 就是错误的&lt;/li&gt;
+&lt;li&gt;不可以以关键字开头，例如 import = 0 就是错误的&lt;/li&gt;
+&lt;li&gt;最好不要与函数重名，例如:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;Pycharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Python&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 返回错误：TypeError: &#39;int&#39; object is not callable&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;python 的数据类型是可变的，但部分类型无法互相转换 (见 3 部分) &lt;br /&gt;
+因此，这样的代码是合法的&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;Pycharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2.25&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 输出值为 2.25&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据类型&#34;&gt;#&lt;/a&gt; 数据类型&lt;/h1&gt;
+&lt;h2 id=&#34;基本数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本数据类型&#34;&gt;#&lt;/a&gt; 基本数据类型&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;数据类型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;转换函数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;用法&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;int&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;int()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;储存整数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;114514&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;float&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;float()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;储存小数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;810.1919&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;bool&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;储存真假值&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;True/False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;str&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;str()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;储存字符串&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;quot;python&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;容器数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#容器数据类型&#34;&gt;#&lt;/a&gt; 容器数据类型&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;数据类型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;定义方法&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;转换方法&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;list&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[列表] 或 list ()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;list()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[1,2,3,4]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tuple&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(列表) 或 tuple ()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tuple()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(1,2,3,4)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;dict&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;{键：值} 或 dict ()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;dict()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;由于 MD 无法显示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;set&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;{值} 或 set ()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;set()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;由于 MD 无法显示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;数据类型会专门开一篇&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;字太多了&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;输入和类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输入和类型&#34;&gt;#&lt;/a&gt; 输入和类型&lt;/h1&gt;
+&lt;h2 id=&#34;输入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输入&#34;&gt;#&lt;/a&gt; 输入&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;u &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;输入字符串:&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;u&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;input () 方法可以实现控制台输入 &lt;br /&gt;
+括号内的内容为输入提示语 \&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;input 方法输入的始终为字符串，需要进行类型转换&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;类型判断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类型判断&#34;&gt;#&lt;/a&gt; 类型判断&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;u &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;u&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# &amp;lt;class:&#39;int&#39;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;type 方法可以返回变量的类型&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;type 方法输出的和返回的并不一致，返回的是类名，见下列代码&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;u &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;u&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;yes&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 输出 yes&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;第三篇是分支结构&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt; x 年后更新&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
+        <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+        <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
+        <updated>2022-01-11T08:24:23.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://www.kaitaku.xyz/2022/01/10/pythone1/</id>
+        <title>python教程-小白篇1</title>
+        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/10/pythone1/"/>
+        <content type="html">&lt;h1 id=&#34;步骤1安装python解释器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤1安装python解释器&#34;&gt;#&lt;/a&gt; 步骤 1. 安装 python 解释器&lt;/h1&gt;
+&lt;p&gt;前往 python 官网:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucHl0aG9uLm9yZy8=&#34;&gt; 点我直达&lt;/span&gt;&lt;br /&gt;
+选择 Download,All releases,3.10.1 &lt;br /&gt;
+请使用 IDM 系多线程下载器&lt;br /&gt;
+&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;不使用也能在 3022 年前下载完&lt;/span&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/NXaQOKqzLld9h4E.png&#34; alt=&#34;step1.png&#34; /&gt;&lt;br /&gt;
+ 在此界面中勾选 Add Python 3.10 to PATH &lt;br /&gt;
+按下 Install Now 安装，完成后按 Close&lt;/p&gt;
+&lt;h1 id=&#34;步骤2安装pycharm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤2安装pycharm&#34;&gt;#&lt;/a&gt; 步骤 2. 安装 pycharm&lt;/h1&gt;
+&lt;p&gt;前往 jetbrains 官网:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS96aC1jbi9weWNoYXJtLw==&#34;&gt; 点我直达&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;中文界面还看不懂？&lt;/span&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/K5qrbPf9NOZLTyw.png&#34; alt=&#34;step2.png&#34; /&gt;&lt;br /&gt;
+ 选择社区版进行安装 &lt;br /&gt;
+安装过程就不说了 (应该能看懂)&lt;/p&gt;
+&lt;h1 id=&#34;步骤3配置pycharm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤3配置pycharm&#34;&gt;#&lt;/a&gt; 步骤 3. 配置 pycharm&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/gbm3Dn2CO8LjUEa.jpg&#34; alt=&#34;step3.jpg&#34; /&gt;&lt;br /&gt;
+ 单击设置 (位置相同，但应该是英文)&lt;br /&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/PLgQeUV35nYWpsF.jpg&#34; alt=&#34;step4.jpg&#34; /&gt;&lt;br /&gt;
+ 选择左侧选项，搜索 Chi, 选择左侧插件安装，重启 Pycharm&lt;/p&gt;
+&lt;h1 id=&#34;步骤4创建新项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤4创建新项目&#34;&gt;#&lt;/a&gt; 步骤 4. 创建新项目&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/gwzUaXv4WdMY8mP.png&#34; alt=&#34;无标题.png&#34; /&gt;&lt;br /&gt;
+&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt; 应该看图就能懂&lt;/span&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/XGQxLtjckfCI3ao.png&#34; alt=&#34;无标题.png&#34; /&gt;&lt;br /&gt;
+ 创建新文件 (文件名不要使用 abc)&lt;/p&gt;
+&lt;p&gt;正经的编程内容请见二篇&lt;/p&gt;
+</content>
+        <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
+        <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+        <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
+        <updated>2022-01-10T11:26:33.000Z</updated>
+    </entry>
+</feed>
