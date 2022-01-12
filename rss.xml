@@ -191,10 +191,16 @@ match u:
 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;作者也没研究透&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;练习题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#练习题&#34;&gt;#&lt;/a&gt; 练习题&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li class=&#34;quiz false&#34;&gt;分支结构分为多分支和双分支。&lt;/li&gt;
-&lt;li class=&#34;quiz true&#34;&gt;逻辑运算符的优先级为 not&amp;gt;and&amp;gt;or。&lt;/li&gt;
-&lt;li class=&#34;quiz fill&#34;&gt;match...case... &lt;span class=&#34;gap&#34;&gt;不同于&lt;/span&gt; C 中的 switch...case...。&lt;/li&gt;
+&lt;li class=&#34;quiz&#34;&gt;以下哪个选项错误 &lt;span class=&#34;gap&#34;&gt;&lt;/span&gt; 。
+&lt;ul class=&#34;options&#34;&gt;
+&lt;li&gt;分支结构有单双多三种&lt;/li&gt;
+&lt;li&gt;一个分支结构块只能执行一个代码块&lt;/li&gt;
+&lt;li class=&#34;correct&#34;&gt;&lt;code&gt;match case&lt;/code&gt;  与 &lt;code&gt;switch case&lt;/code&gt;  没有区别&lt;/li&gt;
+&lt;li&gt;!= 是不等号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;预告：下节是循环&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
