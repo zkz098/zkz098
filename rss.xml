@@ -10,8 +10,59 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 11 Jan 2022 16:24:23 +0800</pubDate>
-        <lastBuildDate>Tue, 11 Jan 2022 16:24:23 +0800</lastBuildDate>
+        <pubDate>Wed, 12 Jan 2022 18:43:36 +0800</pubDate>
+        <lastBuildDate>Wed, 12 Jan 2022 18:43:36 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/12/pythone3/</guid>
+            <title>python教程-小白篇3</title>
+            <link>https://www.kaitaku.xyz/2022/01/12/pythone3/</link>
+            <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
+            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
+            <pubDate>Wed, 12 Jan 2022 18:43:36 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;分支结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分支结构&#34;&gt;#&lt;/a&gt; 分支结构&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本文尚未完成&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;逻辑与比较运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#逻辑与比较运算符&#34;&gt;#&lt;/a&gt; 逻辑与比较运算符&lt;/h2&gt;
+&lt;p&gt;在 python 中，逻辑运算符有以下几种：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;符号英文&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;and&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;两真为真，一假为假&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;or&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一真为真，两假为假&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;非真即假&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;python 中的逻辑运算符有优先级，not &amp;gt; and &amp;gt; or&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;单分支与双分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#单分支与双分支&#34;&gt;#&lt;/a&gt; 单分支与双分支&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;u &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;输入一个数字:&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; u &lt;span class=&#34;token operator&#34;&gt;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;这个数大于等于1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;这个数小于1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;这样的结构就是双分支，只有 if 就是单分支&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;在 python 中，if 的语法是这样的：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; 条件&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#如果真&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    语句&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#如果假&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    语句&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;python 依靠缩进来识别代码文件，所以代码必须使用缩进，建议使用以下几种格式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个空格 (不推荐)&lt;/li&gt;
+&lt;li&gt;一个 Tab&lt;/li&gt;
+&lt;li&gt;四个空格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尽量全部使用同一种进行缩进&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/11/pythone2/</guid>
             <title>python教程-小白篇2</title>
