@@ -13,8 +13,7 @@
         <id>https://www.kaitaku.xyz/2022/01/12/pythone3/</id>
         <title>python教程-小白篇3</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/12/pythone3/"/>
-        <content type="html">&lt;p&gt;&lt;strong&gt;本文尚未完成&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&#34;逻辑与比较运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#逻辑与比较运算符&#34;&gt;#&lt;/a&gt; 逻辑与比较运算符&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;逻辑与比较运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#逻辑与比较运算符&#34;&gt;#&lt;/a&gt; 逻辑与比较运算符&lt;/h1&gt;
 &lt;h2 id=&#34;逻辑运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#逻辑运算符&#34;&gt;#&lt;/a&gt; 逻辑运算符&lt;/h2&gt;
 &lt;p&gt;在 python 中，逻辑运算符有以下几种：&lt;/p&gt;
 &lt;table&gt;
