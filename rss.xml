@@ -14,7 +14,7 @@
         <lastBuildDate>Thu, 13 Jan 2022 10:46:48 +0800</lastBuildDate>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/</guid>
-            <title>python教程-小白篇4</title>
+            <title>python小白篇4-循环与基础类型</title>
             <link>https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
@@ -53,7 +53,7 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/</guid>
-            <title>python教程-小白篇3</title>
+            <title>python小白篇3-运算与分支</title>
             <link>https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
@@ -223,7 +223,7 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/11/python/easy/pythone2/</guid>
-            <title>python教程-小白篇2</title>
+            <title>python小白篇2-类型与变量</title>
             <link>https://www.kaitaku.xyz/2022/01/11/python/easy/pythone2/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
@@ -341,7 +341,7 @@ python 中的变量不需要提前声明类型，需要时定义即可 &lt;br /&
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</guid>
-            <title>python教程-小白篇1</title>
+            <title>python小白篇1-安装与配置</title>
             <link>https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
