@@ -10,8 +10,82 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 13 Jan 2022 10:46:48 +0800</pubDate>
-        <lastBuildDate>Thu, 13 Jan 2022 10:46:48 +0800</lastBuildDate>
+        <pubDate>Thu, 13 Jan 2022 20:39:43 +0800</pubDate>
+        <lastBuildDate>Thu, 13 Jan 2022 20:39:43 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/13/mcipv6/</guid>
+            <title>MC-IPV6联机</title>
+            <link>https://www.kaitaku.xyz/2022/01/13/mcipv6/</link>
+            <category term="MC" scheme="https://www.kaitaku.xyz/categories/mc/" />
+            <category term="MC" scheme="https://www.kaitaku.xyz/tags/MC/" />
+            <pubDate>Thu, 13 Jan 2022 20:39:43 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;开始前的准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始前的准备&#34;&gt;#&lt;/a&gt; 开始前的准备&lt;/h1&gt;
+&lt;h2 id=&#34;游戏本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏本体&#34;&gt;#&lt;/a&gt; 游戏本体&lt;/h2&gt;
+&lt;p&gt;首先，双方需要使用一样的游戏版本和 ModLoader&lt;br /&gt;
+ 推荐直接将游戏打包后发给对方&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;玩原版也需要安装 Forge/Fabric (后续步骤需要使用)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;如果需要安装模组，需要查看模组安装需求 (建议在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24v&#34;&gt; MCMOD 百科&lt;/span&gt;查看)&lt;br /&gt;
+ 分为以下几种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端需装，服务端需装&lt;/li&gt;
+&lt;li&gt;客户端选装，服务端需装&lt;/li&gt;
+&lt;li&gt;客户端需装，服务端选装&lt;/li&gt;
+&lt;li&gt;客户端需装，服务端无效&lt;/li&gt;
+&lt;li&gt;客户端无效，服务端需装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1.2.3 情况建议双方都安装此模组&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;2. 情况主机端必装，其他人不装可能有影响&lt;br /&gt;
+ 3. 情况所有人最好都装&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;4.5 情况无效端不需要装&lt;/p&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;那么，什么是服务端和客户端？&lt;br /&gt;
+假设 S 为存档拥有者，C 为加入的玩家 &lt;br /&gt;
+即 S 为服务端 + 客户端，C 为客户端&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;游戏模组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏模组&#34;&gt;#&lt;/a&gt; 游戏模组&lt;/h2&gt;
+&lt;p&gt;版本截至 2022-1-13 时 &lt;br /&gt;
+安装对应版本的模组 (服务端，客户端均需)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.15.2-1.18.1(forge/fabric)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24vY2xhc3MvNDQ5OC5odG1s&#34;&gt;MCMOD 百科&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tb2RyaW50aC5jb20vbW9kL21jd2lmaXBucA==&#34;&gt;modrinth&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;1.12.2-1.17.1(forge)/1.14.4-1.17.1(fabric)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24vY2xhc3MvMjc1NC5odG1s&#34;&gt;MCMOD 百科&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY3Vyc2Vmb3JnZS5jb20vbWluZWNyYWZ0L21jLW1vZHMvbGFuLXNlcnZlci1wcm9wZXJ0aWVz&#34;&gt;CurseForge&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;1.7.2-1.12.2(forge)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24vY2xhc3MvMTE1OC5odG1s&#34;&gt;MCMOD 百科&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taW5lY3JhZnQuY3Vyc2Vmb3JnZS5jb20vcHJvamVjdHMvc2VydmVyLXByb3BlcnRpZXMtZm9yLWxhbg==&#34;&gt;CurseForge&lt;/span&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你是离线登录，需要将 &lt;code&gt;OnlineMode&lt;/code&gt;  更改为 &lt;code&gt;false&lt;/code&gt; , 具体配置文件更改请参阅 MCMOD 百科&lt;br /&gt;
+建议安装第一个模组，有 GUI 页面&lt;/p&gt;
+&lt;h2 id=&#34;ipv6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ipv6&#34;&gt;#&lt;/a&gt; IPV6&lt;/h2&gt;
+&lt;p&gt;访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Rlc3RpcHY2LmNuLw==&#34;&gt;ipv6test&lt;/span&gt; 来检测双方的 IPV6&lt;br /&gt;
+ 如果一切正常，你看到的页面应该类似于这样：&lt;br /&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2022/01/13/BTxRUH26vQDN7yC.png&#34; alt=&#34;b.png&#34; /&gt;&lt;br /&gt;
+ 底部应该是 10/10, 作者的 DNSv6 不太正常&lt;br /&gt;
+然后检查 IPV6 的 IP, 以下有几个 IP 开头的意义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fe80 开头的无法用于上网，作用就是有个 IP&lt;/li&gt;
+&lt;li&gt;2001 开头为 teredo, 不建议用于联机&lt;/li&gt;
+&lt;li&gt;240e、2409、2408 为国内三大运营商的 IPV6, 非常正常&lt;/li&gt;
+&lt;li&gt;其他开头请见下一步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果属于 fe80 或 2001 开头建议使用 &lt;code&gt;内网穿透&lt;/code&gt; 而非 IPV6&lt;br /&gt;
+&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt; 内网穿透短期不考虑出教程&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;确定 IP 后使用 &lt;code&gt;ping&lt;/code&gt;  指令 ping 一下对方，格式：&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ping 对方 IP&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果有链接超时或多数大于 250ms 就不建议使用此方法了&lt;br /&gt;
+如果可以链接成功，就可以进入下一步了&lt;/p&gt;
+&lt;h1 id=&#34;加入世界&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加入世界&#34;&gt;#&lt;/a&gt; 加入世界&lt;/h1&gt;
+&lt;p&gt;这一步非常的简单：&lt;br /&gt;
+服务端：单人游戏，进入存档后点击对局域网开放，记录下端口号&lt;br /&gt;
+客户端：启动游戏后，点击多人游戏，直接连接，使用以下格式连接：&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;[ipv6 地址]: 端口号&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后应该就可以快乐的联机了，出现错误请评论或自行百度解决&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/</guid>
             <title>python小白篇4-循环与基础类型</title>
