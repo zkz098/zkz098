@@ -590,8 +590,12 @@ python 中的变量不需要提前声明类型，需要时定义即可 &lt;br /&
 &lt;p&gt;前往 python 官网:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucHl0aG9uLm9yZy8=&#34;&gt; 点我直达&lt;/span&gt;&lt;br /&gt;
 选择 Download,All releases,3.10.1 &lt;br /&gt;
 请使用 IDM 系多线程下载器&lt;br /&gt;
-&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;不使用也能在 3022 年前下载完&lt;/span&gt;&lt;br /&gt;
-&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/NXaQOKqzLld9h4E.png&#34; alt=&#34;step1.png&#34; /&gt;&lt;br /&gt;
+&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;不使用也能在 3022 年前下载完&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;如果你真的懒得开网站，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sYy1nbHV0dG9ueS5zMy5hbWF6b25hd3MuY29tLzRTOEE3SUFFaUJvYS9BVnlnTWxqaG1QcnpwbXpJQU9vTTVZc1RsbWNBNGpySy9weXRob24tMy4xMC4xLWFtZDY0LmV4ZQ==&#34;&gt; 点我&lt;/span&gt;&lt;br /&gt;
+下载 (亚马逊节点，速度和官网差不多)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/01/10/NXaQOKqzLld9h4E.png&#34; alt=&#34;step1.png&#34; /&gt;&lt;br /&gt;
  在此界面中勾选 Add Python 3.10 to PATH &lt;br /&gt;
 按下 Install Now 安装，完成后按 Close&lt;/p&gt;
 &lt;h1 id=&#34;步骤2安装pycharm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤2安装pycharm&#34;&gt;#&lt;/a&gt; 步骤 2. 安装 pycharm&lt;/h1&gt;
