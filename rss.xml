@@ -10,9 +10,156 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 14 Jan 2022 15:06:58 +0800</pubDate>
-        <lastBuildDate>Fri, 14 Jan 2022 15:06:58 +0800</lastBuildDate>
+        <pubDate>Sat, 15 Jan 2022 20:57:43 +0800</pubDate>
+        <lastBuildDate>Sat, 15 Jan 2022 20:57:43 +0800</lastBuildDate>
         <category term="python" />
+        <item>
+            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</guid>
+            <title>python小白篇5plus-常用模块</title>
+            <link>https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</link>
+            <pubDate>Sat, 15 Jan 2022 20:57:43 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;random-随机数库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random-随机数库&#34;&gt;#&lt;/a&gt; random - 随机数库&lt;/h1&gt;
+&lt;h2 id=&#34;random方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random方法&#34;&gt;#&lt;/a&gt; random 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+a = random.random()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;random()&lt;/code&gt;  方法可以生成一个大于 0 小于 1 的浮点随机数&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;位数可能很长&lt;/span&gt;&lt;br /&gt;
+通常使用 &lt;code&gt;round()&lt;/code&gt;  方法来控制浮点数长度&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;&lt;code&gt;round(n,ndigits=x)&lt;/code&gt;  为其调用方法，n 为数据，ndigits 为位数 &lt;br /&gt;
+ &lt;code&gt;round()&lt;/code&gt;  方法遵循四舍五入原则&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;好用多了&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;python 使用模块前，需要先使用 &lt;code&gt;import&lt;/code&gt;  关键字声明&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;randint方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#randint方法&#34;&gt;#&lt;/a&gt; randint 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+a = random.randint(0,10)
+print(a) # 0-10随机数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;randint(s,e)&lt;/code&gt;  方法可以生成一个 s-e 区间内的随机整数&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;&lt;code&gt;randint()&lt;/code&gt;  含头含尾，会生成头数和尾数&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;由于 bool 类型是 int 的子类，所以 &lt;code&gt;randint(0,1)&lt;/code&gt;  相当于 50% 概率为真，可以直接用在条件中，不需要 &lt;code&gt;==&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;uniform方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#uniform方法&#34;&gt;#&lt;/a&gt; uniform 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+a = random.uniform(0,10)
+print(a) # 0-10随机浮点数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;uniform()&lt;/code&gt;  相当于一个带参数的 &lt;code&gt;random()&lt;/code&gt;  方法&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;&lt;code&gt;uniform()&lt;/code&gt;  的位数更&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;离谱&lt;/span&gt;长，务必使用 &lt;code&gt;round()&lt;/code&gt;  进行处理&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;randrange方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#randrange方法&#34;&gt;#&lt;/a&gt; randrange 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+a = random.randrange(0,10,2)
+print(a) # 0-10的随机偶数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;randrange()&lt;/code&gt;  方法生成随机递增序列里的一个数，这个数一定是 &lt;code&gt;起始位+步长的倍数&lt;/code&gt; &lt;br /&gt;
+看不懂？让我们等量代换一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+l = list(range(0,10,2))
+print(random.choice(l)) # 随机从列表里选择一个数据,后面会讲到
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这段代码与上面的结果是一致的，它的流程就是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;生成一个符合输入参数的列表&lt;/li&gt;
+&lt;li&gt;从列表里随机选择一个数&lt;/li&gt;
+&lt;li&gt;返回这个数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这里还有一个拆分更彻底的版本：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+# 根据输入参数生成列表
+l = []
+for i in range(0, 10, 2):
+    l.append(i)
+
+# 随机选择元素
+index = random.randint(0, len(l) - 1)
+print(l[index]) # 返回(输出)此元素
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;shuffle和sample方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#shuffle和sample方法&#34;&gt;#&lt;/a&gt; shuffle 和 sample 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+l = [1,2,3,4,5]
+random.shuffle(l)
+print(l)
+l = [1,2,3,4,5]
+r = random.sample(l,5)
+print(r)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;shuffle(seq)&lt;/code&gt;  和 &lt;code&gt;sample(seq,k=len(seq))&lt;/code&gt;  都可以随机打乱列表&lt;br /&gt;
+但 shuffle 是在原列表上做操作，而 sample 则是返回一个新列表&lt;br /&gt;
+ &lt;code&gt;sample(seq,k=n&amp;lt;len(seq)&lt;/code&gt;  则可以从列表中随机提取长度为 n 的片段 (不连续)&lt;/p&gt;
+&lt;h2 id=&#34;choice和choices方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#choice和choices方法&#34;&gt;#&lt;/a&gt; choice 和 choices 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+l = [1,2,3,4,5]
+r = random.choice(l)
+print(r)
+r1 = random.choices(l,k=3)
+print(r1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;choice(seq)&lt;/code&gt;  方法可以从列表中返回一个随机元素&lt;br /&gt;
+ &lt;code&gt;choices(seq,k=n)&lt;/code&gt;  方法可以从列表中返回 k 个随机元素&lt;/p&gt;
+&lt;h1 id=&#34;string-字符串模块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#string-字符串模块&#34;&gt;#&lt;/a&gt; string - 字符串模块&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;string.ascii_letters&lt;/code&gt;  从字母 a-Z 的字符串&lt;br /&gt;
+ &lt;code&gt;string.ascii_lowercase&lt;/code&gt;  从字母 a-z 的字符串&lt;br /&gt;
+ &lt;code&gt;string.ascii_uppercase&lt;/code&gt;  从字母 A-Z 的字符串&lt;br /&gt;
+ &lt;code&gt;string.digits&lt;/code&gt;  所有十进制常数&lt;br /&gt;
+ &lt;code&gt;string.punctuation&lt;/code&gt;  所有在 ASCII 环境下被 C 认为标点的字符串&lt;/p&gt;
+&lt;h1 id=&#34;time-时间模块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#time-时间模块&#34;&gt;#&lt;/a&gt; time - 时间模块&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;仅包含及其常用的方法，并不完整&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;struct_time格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#struct_time格式&#34;&gt;#&lt;/a&gt; struct_time 格式&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;struct_time&lt;/code&gt;  是 time 模块返回的常见序列，索引见下表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;索引&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;属性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_year (年)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;比如 2022&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_mon (月)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1-12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_mday (日)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1-31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_hour (时)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0-23 (转换请 + 1)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_min (分)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0-59 (同上)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/</guid>
             <title>python小白篇5-容器数据类型与常用方法</title>
