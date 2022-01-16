@@ -17,6 +17,9 @@
             <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</guid>
             <title>python小白篇5plus-常用模块</title>
             <link>https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</link>
+            <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
+            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Sat, 15 Jan 2022 20:57:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;random-随机数库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random-随机数库&#34;&gt;#&lt;/a&gt; random - 随机数库&lt;/h1&gt;
 &lt;h2 id=&#34;random方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random方法&#34;&gt;#&lt;/a&gt; random 方法&lt;/h2&gt;
@@ -156,8 +159,104 @@ print(r1)
 &lt;td style=&#34;text-align:center&#34;&gt;tm_min (分)&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;0-59 (同上)&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_sec (秒)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0-61&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_wday (周几)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0-6 (0 表周日，需要 + 1)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_yday (一年中的第几天)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1-366&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tm_isdst (是否是夏令时)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;默认为 - 1&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;localtime和gmtime方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#localtime和gmtime方法&#34;&gt;#&lt;/a&gt; localtime 和 gmtime 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import time
+
+t = time.localtime() #返回一个struct_time对象
+print(t) 
+utc = time.gmtime() #返回一个struct_time对象
+print(utc) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个方法都会将输入的时间戳转换为 &lt;code&gt;struct_time对象&lt;/code&gt; ，不输入则使用现在的时间戳&lt;br /&gt;
+区别：localtime 使用你所在的时区，gmtime 使用 UTC 标准时间 (+0.00)&lt;br /&gt;
+ 附带一个 &lt;code&gt;mktime&lt;/code&gt;  方法，它可以将 &lt;code&gt;struct_time对象&lt;/code&gt; 转换回时间戳&lt;/p&gt;
+&lt;h2 id=&#34;time和time_ns方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#time和time_ns方法&#34;&gt;#&lt;/a&gt; time 和 time_ns 方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import time
+
+t = time.time()
+print(t)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;time()&lt;/code&gt;  返回现在的时间戳&lt;br /&gt;
+ &lt;code&gt;time_ns()&lt;/code&gt;  也是返回现在的时间戳，但是是 int 对象，不可以传入 &lt;code&gt;localtime&lt;/code&gt;  作为参数&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;time 模块比较复杂，建议查看&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvemgtY24vMy9saWJyYXJ5L3RpbWUuaHRtbA==&#34;&gt;官方文档&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;练习题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#练习题&#34;&gt;#&lt;/a&gt; 练习题&lt;/h1&gt;
+&lt;p&gt;1. 输入一个时间戳，返回它的年、月、日、时、分、秒 (当前时区),&lt;br /&gt;
+ 不输入则使用现在的时间戳，样例输出 / 入如下： &lt;br /&gt;
+[输入]&lt;em&gt; 没有输入任何东西&lt;/em&gt;  &lt;br /&gt;
+[输出] 2022 年 1 月 16 日 16 时 7 分 30 秒 (此时时间)&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;思考完再看代码样例&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;. &lt;br /&gt;
+. &lt;br /&gt;
+. &lt;br /&gt;
+.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import time
+
+u = input(&amp;quot;请输入时间戳:&amp;quot;)
+if u == &amp;quot;&amp;quot;:
+    u = time.time()
+else:
+    u = int(u)
+t = time.localtime(u)
+print(f&amp;quot;&amp;#123;t[0]&amp;#125;年&amp;#123;t[1]&amp;#125;月&amp;#123;t[2]&amp;#125;日&amp;#123;t[3]&amp;#125;时&amp;#123;t[4]&amp;#125;分&amp;#123;t[5]&amp;#125;秒&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2. 输入一串数据，判断它转换为 int 类型是否会报错，&lt;br /&gt;
+可以则输出&lt;strong&gt;可以转换为 int 类型&lt;/strong&gt;并返回这个数&lt;br /&gt;
+不可以则输出&lt;strong&gt;不可以转换为 int 类型&lt;/strong&gt;并返回这个字符串可以转换的部分&lt;br /&gt;
+样例输入 / 出：&lt;br /&gt;
+第一组数据： &lt;br /&gt;
+[输入] 123456&lt;br /&gt;
+ [输出] 可以转换为 int 类型&lt;br /&gt;
+ [输出] 123456&lt;br /&gt;
+ 第二组数据： &lt;br /&gt;
+[输入] a123b456&lt;br /&gt;
+ [输出] 不可以转换为 int 类型&lt;br /&gt;
+ [输出] 123456&lt;br /&gt;
+. &lt;br /&gt;
+. &lt;br /&gt;
+. &lt;br /&gt;
+. &lt;br /&gt;
+.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import string
+u = input(&amp;quot;输入数据:&amp;quot;)
+t = &amp;quot;&amp;quot;
+can_int = True
+for i in u:
+    if i in string.digits:
+        t += i
+    else:
+        can_int = False
+if can_int:
+    print(&amp;quot;可以转换为int类型&amp;quot;)
+else:
+    print(&amp;quot;不可以转换为int类型&amp;quot;)
+print(t)
+&lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>
         <item>
