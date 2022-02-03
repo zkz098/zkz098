@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/2022/02/03/quic/
 https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/
 https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9/
 https://www.kaitaku.xyz/2022/01/27/python/easy/pythone8/
@@ -7,4 +8,3 @@ https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/
 https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/
 https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/
 https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/
-https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/

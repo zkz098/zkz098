@@ -8,8 +8,67 @@
     <author>
       <name>chou kaitaku</name>
     </author>
-    <updated>2022-01-29T11:49:46.000Z</updated>
+    <updated>2022-02-03T05:15:13.000Z</updated>
     <category term="python" />
+    <entry>
+        <id>https://www.kaitaku.xyz/2022/02/03/quic/</id>
+        <title>本站已全面支持QUIC和HTTP/3</title>
+        <link rel="alternate" href="https://www.kaitaku.xyz/2022/02/03/quic/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;目前 QUIC 连接并不稳定，大概率使用 &lt;code&gt;http/2&lt;/code&gt;  进行连接 &lt;br /&gt;
+本站部署的是 iQUIC,h3-29 草案&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;quic与http3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quic与http3&#34;&gt;#&lt;/a&gt; QUIC 与 HTTP3&lt;/h1&gt;
+&lt;h2 id=&#34;什么是quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是quic&#34;&gt;#&lt;/a&gt; 什么是 QUIC&lt;/h2&gt;
+&lt;p&gt;QUIC 是 Quick UDP Internet Connections 的缩写，目前分为 iQUIC 和 gQUIC 两种&lt;br /&gt;
+ QUIC 类似于在内核层实现的 TCP + TLS + HTTP/2。但 QUIC 基于 UDP, 因此绕开了对 TCP 进行改造的大量成本&lt;br /&gt;
+ QUIC 相较于 TLS+HTTP2 有几点优势：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首次握手 1-RTT&lt;/li&gt;
+&lt;li&gt;改善了 TCP 的拥塞&lt;/li&gt;
+&lt;li&gt;前向纠错，减少重传&lt;/li&gt;
+&lt;li&gt;连接平滑迁移，网络状态的变更不会影响连接断线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;QUIC 与 HTTP/2+TLS 的示意图：&lt;br /&gt;
+&lt;img data-src=&#34;https://pic.imgdb.cn/item/61fb6eff2ab3f51d91ffcff5.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;为什么部署quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么部署quic&#34;&gt;#&lt;/a&gt; 为什么部署 QUIC&lt;/h2&gt;
+&lt;p&gt;本网站已经部署了 HTTP/2+TLS1.3v, 理论上可以实现 0-RTT 握手&lt;br /&gt;
+但由于 QUIC 对&lt;strong&gt;弱网环境&lt;/strong&gt;的优化所以部署了 QUIC&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;4 次丢 1 次的离谱传输&lt;/span&gt;&lt;br /&gt;
+还有一个次要原因就是速度快和我个人比较喜欢新的协议&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;闲的&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;理由写的有&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;亿&lt;/span&gt;点多，进入正题&lt;/p&gt;
+&lt;h2 id=&#34;quic部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quic部署&#34;&gt;#&lt;/a&gt; QUIC 部署&lt;/h2&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本站为纯静态网站且近期才开始部署，所以使用方案较为激进&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;本站直接使用 &lt;code&gt;caddy&lt;/code&gt;  进行 web 服务，并没有使用 nginx+caddy 的方案&lt;/p&gt;
+&lt;h3 id=&#34;安装caddy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装caddy&#34;&gt;#&lt;/a&gt; 安装 caddy&lt;/h3&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;caddy 仅支持 iQUIC 的最新草案，支持 gQUIC 请使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubGl0ZXNwZWVkdGVjaC5jb20v&#34;&gt;litespeed&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;本文针对于 ubuntu 系统，其他系统见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jYWRkeXNlcnZlci5jb20vZG9jcy9pbnN0YWxs&#34;&gt; caddy 官网&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; -y debian-keyring debian-archive-keyring apt-transport-https&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; -1sLf &lt;span class=&#34;token string&#34;&gt;&#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tee&lt;/span&gt; /etc/apt/trusted.gpg.d/caddy-stable.asc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; -1sLf &lt;span class=&#34;token string&#34;&gt;&#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tee&lt;/span&gt; /etc/apt/sources.list.d/caddy-stable.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; update&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; caddy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;执行上述命令即可安装 caddy&lt;/p&gt;
+&lt;h3 id=&#34;配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置文件&#34;&gt;#&lt;/a&gt; 配置文件&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/caddy/Caddyfile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;创建一个 &lt;code&gt;caddyfile&lt;/code&gt;  然后写入以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    servers &amp;#123;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        protocol &amp;#123;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            experimental_http3&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后在这段的&lt;strong&gt;下面&lt;/strong&gt;写入：&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;你的域名：443 &amp;#123;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    root * &amp;#x2F; 你的网站根目录&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    encode zstd gzip # 开启 gzip 功能&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    tls mail@mail.com # 你的邮件，用于申请 ssl 证书&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    file_server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果你自带证书，可以将 tls 后写成这样：&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tls key pem # 先是 key 文件，然后 pem 证书&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;再在域名这个块内插入以下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;header &amp;#123;
+    alt-svc h3=&amp;quot;:443&amp;quot;, ma=2592000
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后执行以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; caddy run -config&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/etc/caddy/Caddyfile &lt;span class=&#34;token comment&#34;&gt;# 你的配置文件路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果没有错误，就成功了&lt;/p&gt;
+&lt;h3 id=&#34;验证quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#验证quic&#34;&gt;#&lt;/a&gt; 验证 QUIC&lt;/h3&gt;
+&lt;p&gt;HTTP/2 and SPDY indicator 在部分情况下因为首次握手使用 HTTP/2 就会显示不正常，建议使用浏览器的开发者工具查看&lt;br /&gt;
+&lt;img data-src=&#34;https://pic.imgdb.cn/item/61fb790d2ab3f51d9109e8e2.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+一眼看过去都是 h2 协议，这个时候就可以勾选&lt;strong&gt;禁用缓存&lt;/strong&gt;然后刷新&lt;br /&gt;
+&lt;img data-src=&#34;https://pic.imgdb.cn/item/61fb798e2ab3f51d910a6404.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+这次有了一个 H3 协议就代表 QUIC 部署完成，但优势不大，建议使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9odHRwM2NoZWNrLm5ldC8=&#34;&gt; h3check&lt;/span&gt; 检测自己的网站&lt;/p&gt;
+</content>
+        <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
+        <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
+        <updated>2022-02-03T05:15:13.000Z</updated>
+    </entry>
     <entry>
         <id>https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/</id>
         <title>python小白篇9plus-第三方库</title>
