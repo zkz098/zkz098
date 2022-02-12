@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.kaitaku.xyz/2022/02/03/quic/</loc>
-    <lastmod>2022-02-06</lastmod>
+    <lastmod>2022-02-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</loc>
+    <lastmod>2022-02-08</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/</loc>
@@ -27,10 +31,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</loc>
     <lastmod>2022-01-16</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</loc>
-    <lastmod>2022-01-15</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/</loc>
