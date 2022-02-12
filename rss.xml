@@ -23,7 +23,7 @@
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;目前 QUIC 连接并不稳定，大概率使用 &lt;code&gt;http/2&lt;/code&gt;  进行连接 &lt;br /&gt;
 本站部署的是 iQUIC,h3-29 草案&lt;br /&gt;
-目前服务器已紧急调回 vercel,QUIC 在修好之前不会起效&lt;/p&gt;
+甲骨文云修好了，但套了层 CDN (cloudflare), 所以还是支持 quic 的&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;quic与http3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quic与http3&#34;&gt;#&lt;/a&gt; QUIC 与 HTTP3&lt;/h1&gt;
 &lt;h2 id=&#34;什么是quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是quic&#34;&gt;#&lt;/a&gt; 什么是 QUIC&lt;/h2&gt;
