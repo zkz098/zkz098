@@ -108,9 +108,9 @@
         <updated>2022-02-12T07:52:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/02/03/quic/</id>
+        <id>https://www.kaitaku.xyz/2022/02/03/hexo/quic/</id>
         <title>本站已全面支持QUIC和HTTP/3</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/02/03/quic/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/2022/02/03/hexo/quic/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;目前 QUIC 连接并不稳定，大概率使用 &lt;code&gt;http/2&lt;/code&gt;  进行连接 &lt;br /&gt;
 本站部署的是 iQUIC,h3-29 草案&lt;br /&gt;
