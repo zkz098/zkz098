@@ -11,9 +11,9 @@
     <updated>2022-02-12T08:53:20.000Z</updated>
     <category term="python" />
     <entry>
-        <id>https://www.kaitaku.xyz/2022/02/12/hexo/hexo2/</id>
+        <id>https://www.kaitaku.xyz/hexo/hexo2/</id>
         <title>hexo教程2-配置与写作</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/02/12/hexo/hexo2/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/hexo/hexo2/"/>
         <content type="html">&lt;h1 id=&#34;配置hexo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置hexo&#34;&gt;#&lt;/a&gt; 配置 hexo&lt;/h1&gt;
 &lt;h2 id=&#34;hexo配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo配置&#34;&gt;#&lt;/a&gt; hexo 配置&lt;/h2&gt;
 &lt;div class=&#34;note info&#34;&gt;
@@ -63,9 +63,9 @@
         <updated>2022-02-12T08:53:20.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/02/12/hexo/hexo1/</id>
+        <id>https://www.kaitaku.xyz/hexo/hexo1/</id>
         <title>hexo教程1-开发环境搭建</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/02/12/hexo/hexo1/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/hexo/hexo1/"/>
         <content type="html">&lt;h1 id=&#34;开发环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开发环境搭建&#34;&gt;#&lt;/a&gt; 开发环境搭建&lt;/h1&gt;
 &lt;h2 id=&#34;nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodejs&#34;&gt;#&lt;/a&gt; node.js&lt;/h2&gt;
 &lt;p&gt;进入 node.js&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==&#34;&gt; 官网&lt;/span&gt;，下载 current 版 (如下图所示)&lt;br /&gt;
@@ -108,9 +108,9 @@
         <updated>2022-02-12T07:52:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/02/03/hexo/quic/</id>
+        <id>https://www.kaitaku.xyz/hexo/quic/</id>
         <title>本站已全面支持QUIC和HTTP/3</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/02/03/hexo/quic/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/hexo/quic/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;目前 QUIC 连接并不稳定，大概率使用 &lt;code&gt;http/2&lt;/code&gt;  进行连接 &lt;br /&gt;
 本站部署的是 iQUIC,h3-29 草案&lt;br /&gt;
@@ -172,9 +172,9 @@
         <updated>2022-02-03T05:15:13.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone9p/</id>
         <title>python小白篇9plus-第三方库</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone9p/"/>
         <content type="html">&lt;h1 id=&#34;安装第三方库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装第三方库&#34;&gt;#&lt;/a&gt; 安装第三方库&lt;/h1&gt;
 &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;p&gt;首先在 PowerShell 执行以下命令：&lt;/p&gt;
@@ -231,9 +231,9 @@
         <updated>2022-01-29T11:49:46.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone9/</id>
         <title>python小白篇9-面向对象与异常捕获</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone9/"/>
         <content type="html">&lt;h1 id=&#34;面向对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向对象&#34;&gt;#&lt;/a&gt; 面向对象&lt;/h1&gt;
 &lt;h2 id=&#34;类方法和静态方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类方法和静态方法&#34;&gt;#&lt;/a&gt; 类方法和静态方法&lt;/h2&gt;
 &lt;h3 id=&#34;类方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类方法&#34;&gt;#&lt;/a&gt; 类方法&lt;/h3&gt;
@@ -301,9 +301,9 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         <updated>2022-01-29T03:22:22.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/27/python/easy/pythone8/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone8/</id>
         <title>python小白篇8-面向对象和生成器与迭代器</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/27/python/easy/pythone8/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone8/"/>
         <content type="html">&lt;h1 id=&#34;面向对象基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向对象基础&#34;&gt;#&lt;/a&gt; 面向对象基础&lt;/h1&gt;
 &lt;h2 id=&#34;建立一个类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建立一个类&#34;&gt;#&lt;/a&gt; 建立一个类&lt;/h2&gt;
 &lt;h3 id=&#34;类的基本语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类的基本语法&#34;&gt;#&lt;/a&gt; 类的基本语法&lt;/h3&gt;
@@ -359,9 +359,9 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         <updated>2022-01-27T11:54:36.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/21/python/easy/pythone7/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone7/</id>
         <title>python小白篇7-递归与匿名函数</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/21/python/easy/pythone7/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone7/"/>
         <content type="html">&lt;h1 id=&#34;递归&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h1&gt;
 &lt;p&gt;递归是什么？&lt;br /&gt;
  举个例子：&lt;/p&gt;
@@ -411,9 +411,9 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         <updated>2022-01-21T03:56:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/18/python/easy/pythone6/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone6/</id>
         <title>python小白篇6-函数与作用域</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/18/python/easy/pythone6/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone6/"/>
         <content type="html">&lt;h1 id=&#34;函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h1&gt;
 &lt;h2 id=&#34;定义函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义函数&#34;&gt;#&lt;/a&gt; 定义函数&lt;/h2&gt;
 &lt;p&gt;一个任务：把每个值乘 2 次方并除以 5 再加一&lt;br /&gt;
@@ -476,9 +476,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
         <updated>2022-01-18T03:54:44.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone5p/</id>
         <title>python小白篇5plus-常用模块</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone5p/"/>
         <content type="html">&lt;h1 id=&#34;random-随机数库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random-随机数库&#34;&gt;#&lt;/a&gt; random - 随机数库&lt;/h1&gt;
 &lt;h2 id=&#34;random方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random方法&#34;&gt;#&lt;/a&gt; random 方法&lt;/h2&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;import random&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &amp;#x3D; random.random()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;random()&lt;/code&gt;  方法可以生成一个大于 0 小于 1 的浮点随机数&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;位数可能很长&lt;/span&gt;&lt;br /&gt;
@@ -634,9 +634,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
         <updated>2022-01-15T12:57:43.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone5/</id>
         <title>python小白篇5-容器数据类型与常用方法</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone5/"/>
         <content type="html">&lt;h1 id=&#34;容器类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#容器类型&#34;&gt;#&lt;/a&gt; 容器类型&lt;/h1&gt;
 &lt;h2 id=&#34;列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#列表&#34;&gt;#&lt;/a&gt; 列表&lt;/h2&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;list1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;list2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;c&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;python 中的 list 可以存储相同 (list1) 或不同的数据 (list2)&lt;br /&gt;
@@ -747,9 +747,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
         <updated>2022-01-14T07:06:58.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/13/mcipv6/</id>
+        <id>https://www.kaitaku.xyz/mcipv6/</id>
         <title>MC-IPV6联机</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/13/mcipv6/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/mcipv6/"/>
         <content type="html">&lt;h1 id=&#34;开始前的准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始前的准备&#34;&gt;#&lt;/a&gt; 开始前的准备&lt;/h1&gt;
 &lt;h2 id=&#34;游戏本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏本体&#34;&gt;#&lt;/a&gt; 游戏本体&lt;/h2&gt;
 &lt;p&gt;首先，双方需要使用一样的游戏版本和 ModLoader&lt;br /&gt;
@@ -821,9 +821,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
         <updated>2022-01-13T12:39:43.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone4/</id>
         <title>python小白篇4-循环与基础类型</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone4/"/>
         <content type="html">&lt;h1 id=&#34;循环&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#循环&#34;&gt;#&lt;/a&gt; 循环&lt;/h1&gt;
 &lt;h2 id=&#34;while循环&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#while循环&#34;&gt;#&lt;/a&gt; while 循环&lt;/h2&gt;
 &lt;p&gt;假设有这样一道题：输出 1-10 的所有数字。 &lt;br /&gt;
@@ -918,9 +918,9 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
         <updated>2022-01-13T02:46:48.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone3/</id>
         <title>python小白篇3-运算与分支</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone3/"/>
         <content type="html">&lt;h1 id=&#34;逻辑与比较运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#逻辑与比较运算符&#34;&gt;#&lt;/a&gt; 逻辑与比较运算符&lt;/h1&gt;
 &lt;h2 id=&#34;逻辑运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#逻辑运算符&#34;&gt;#&lt;/a&gt; 逻辑运算符&lt;/h2&gt;
 &lt;p&gt;在 python 中，逻辑运算符有以下几种：&lt;/p&gt;
@@ -1088,9 +1088,9 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
         <updated>2022-01-12T10:43:36.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/11/python/easy/pythone2/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone2/</id>
         <title>python小白篇2-类型与变量</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/11/python/easy/pythone2/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone2/"/>
         <content type="html">&lt;h1 id=&#34;输出一段文字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输出一段文字&#34;&gt;#&lt;/a&gt; 输出一段文字&lt;/h1&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;PyCharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello world&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;print 为输出函数，会将括号内的值输出 &lt;br /&gt;
 &amp;quot;hello world&amp;quot; 为传入的值，类型为字符串 &lt;br /&gt;
@@ -1206,9 +1206,9 @@ python 中的变量不需要提前声明类型，需要时定义即可 &lt;br /&
         <updated>2022-01-11T08:24:23.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</id>
+        <id>https://www.kaitaku.xyz/python/easy/pythone1/</id>
         <title>python小白篇1-安装与配置</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone1/"/>
         <content type="html">&lt;h1 id=&#34;步骤1安装python解释器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤1安装python解释器&#34;&gt;#&lt;/a&gt; 步骤 1. 安装 python 解释器&lt;/h1&gt;
 &lt;p&gt;前往 python 官网:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucHl0aG9uLm9yZy8=&#34;&gt; 点我直达&lt;/span&gt;&lt;br /&gt;
 选择 Download,All releases,3.10.1 &lt;br /&gt;

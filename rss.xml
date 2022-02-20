@@ -14,9 +14,9 @@
         <lastBuildDate>Sat, 12 Feb 2022 16:53:20 +0800</lastBuildDate>
         <category term="python" />
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/02/12/hexo/hexo2/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/hexo/hexo2/</guid>
             <title>hexo教程2-配置与写作</title>
-            <link>https://www.kaitaku.xyz/2022/02/12/hexo/hexo2/</link>
+            <link>https://www.kaitaku.xyz/hexo/hexo2/</link>
             <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
             <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
             <pubDate>Sat, 12 Feb 2022 16:53:20 +0800</pubDate>
@@ -66,9 +66,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/02/12/hexo/hexo1/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/hexo/hexo1/</guid>
             <title>hexo教程1-开发环境搭建</title>
-            <link>https://www.kaitaku.xyz/2022/02/12/hexo/hexo1/</link>
+            <link>https://www.kaitaku.xyz/hexo/hexo1/</link>
             <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
             <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
             <pubDate>Sat, 12 Feb 2022 15:52:59 +0800</pubDate>
@@ -111,9 +111,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/02/03/hexo/quic/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/hexo/quic/</guid>
             <title>本站已全面支持QUIC和HTTP/3</title>
-            <link>https://www.kaitaku.xyz/2022/02/03/hexo/quic/</link>
+            <link>https://www.kaitaku.xyz/hexo/quic/</link>
             <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
             <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
             <pubDate>Thu, 03 Feb 2022 13:15:13 +0800</pubDate>
@@ -175,9 +175,9 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; ufw allow &lt;span class=&#34;token number&#34;&gt;443&lt;/span&gt;/udp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone9p/</guid>
             <title>python小白篇9plus-第三方库</title>
-            <link>https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9p/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone9p/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -234,9 +234,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone9/</guid>
             <title>python小白篇9-面向对象与异常捕获</title>
-            <link>https://www.kaitaku.xyz/2022/01/29/python/easy/pythone9/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone9/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -304,9 +304,9 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/27/python/easy/pythone8/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone8/</guid>
             <title>python小白篇8-面向对象和生成器与迭代器</title>
-            <link>https://www.kaitaku.xyz/2022/01/27/python/easy/pythone8/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone8/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -362,9 +362,9 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;值 1 值 2 值 3 值 1 值 2 值 3...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/21/python/easy/pythone7/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone7/</guid>
             <title>python小白篇7-递归与匿名函数</title>
-            <link>https://www.kaitaku.xyz/2022/01/21/python/easy/pythone7/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone7/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -414,9 +414,9 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/18/python/easy/pythone6/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone6/</guid>
             <title>python小白篇6-函数与作用域</title>
-            <link>https://www.kaitaku.xyz/2022/01/18/python/easy/pythone6/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone6/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -479,9 +479,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone5p/</guid>
             <title>python小白篇5plus-常用模块</title>
-            <link>https://www.kaitaku.xyz/2022/01/15/python/easy/pythone5p/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone5p/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -637,9 +637,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; string&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;u &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;输入数据:&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;t &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;can_int &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; u&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; string&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;digits&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        t &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; i&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        can_int &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;False&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; can_int&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;可以转换为int类型&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;不可以转换为int类型&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;t&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone5/</guid>
             <title>python小白篇5-容器数据类型与常用方法</title>
-            <link>https://www.kaitaku.xyz/2022/01/14/python/easy/pythone5/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone5/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -750,9 +750,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/13/mcipv6/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/mcipv6/</guid>
             <title>MC-IPV6联机</title>
-            <link>https://www.kaitaku.xyz/2022/01/13/mcipv6/</link>
+            <link>https://www.kaitaku.xyz/mcipv6/</link>
             <category term="MC" scheme="https://www.kaitaku.xyz/categories/mc/" />
             <category term="MC" scheme="https://www.kaitaku.xyz/tags/MC/" />
             <pubDate>Thu, 13 Jan 2022 20:39:43 +0800</pubDate>
@@ -824,9 +824,9 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone4/</guid>
             <title>python小白篇4-循环与基础类型</title>
-            <link>https://www.kaitaku.xyz/2022/01/13/python/easy/pythone4/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone4/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -921,9 +921,9 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone3/</guid>
             <title>python小白篇3-运算与分支</title>
-            <link>https://www.kaitaku.xyz/2022/01/12/python/easy/pythone3/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone3/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -1091,9 +1091,9 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/11/python/easy/pythone2/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone2/</guid>
             <title>python小白篇2-类型与变量</title>
-            <link>https://www.kaitaku.xyz/2022/01/11/python/easy/pythone2/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone2/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
@@ -1209,9 +1209,9 @@ python 中的变量不需要提前声明类型，需要时定义即可 &lt;br /&
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone1/</guid>
             <title>python小白篇1-安装与配置</title>
-            <link>https://www.kaitaku.xyz/2022/01/10/python/easy/pythone1/</link>
+            <link>https://www.kaitaku.xyz/python/easy/pythone1/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
