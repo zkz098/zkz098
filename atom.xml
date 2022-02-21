@@ -11,9 +11,9 @@
     <updated>2022-02-21T05:24:29.000Z</updated>
     <category term="python" />
     <entry>
-        <id>https://www.kaitaku.xyz/english/quic/</id>
+        <id>https://www.kaitaku.xyz/english/hexo/quic/</id>
         <title>This site has fully supported QUIC and HTTP/3</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/english/quic/"/>
+        <link rel="alternate" href="https://www.kaitaku.xyz/english/hexo/quic/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;This page is translated. The chinese page is &lt;a href=&#34;https://www.kaitaku.xyz/hexo/quic/&#34;&gt;here&lt;/a&gt;&lt;br /&gt;
 If you have a better translation, please send it to this email: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOnprejIwMDgxMjA0QDEyNi5jb20=&#34;&gt;zkz20081204@126.com&lt;/span&gt;&lt;/p&gt;
@@ -38,7 +38,8 @@ DUE TO QUIC&#39;s optimization of weak network environments, QUIC was deployed.&
 Another secondary reason is the speed, and I personally prefer the new protocol.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;To be continued&lt;/strong&gt;&lt;/p&gt;
 </content>
-        <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
+        <category term="english" scheme="https://www.kaitaku.xyz/categories/english/" />
+        <category term="hexo" scheme="https://www.kaitaku.xyz/categories/english/hexo/" />
         <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
         <updated>2022-02-21T05:24:29.000Z</updated>
     </entry>

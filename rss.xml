@@ -14,10 +14,11 @@
         <lastBuildDate>Mon, 21 Feb 2022 13:24:29 +0800</lastBuildDate>
         <category term="python" />
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/english/quic/</guid>
+            <guid isPermalink="true">https://www.kaitaku.xyz/english/hexo/quic/</guid>
             <title>This site has fully supported QUIC and HTTP/3</title>
-            <link>https://www.kaitaku.xyz/english/quic/</link>
-            <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
+            <link>https://www.kaitaku.xyz/english/hexo/quic/</link>
+            <category term="english" scheme="https://www.kaitaku.xyz/categories/english/" />
+            <category term="hexo" scheme="https://www.kaitaku.xyz/categories/english/hexo/" />
             <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
             <pubDate>Mon, 21 Feb 2022 13:24:29 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
