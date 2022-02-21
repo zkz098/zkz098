@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/english/quic/
 https://www.kaitaku.xyz/hexo/hexo2/
 https://www.kaitaku.xyz/hexo/hexo1/
 https://www.kaitaku.xyz/hexo/quic/
@@ -12,4 +13,3 @@ https://www.kaitaku.xyz/python/easy/pythone5/
 https://www.kaitaku.xyz/python/easy/pythone3/
 https://www.kaitaku.xyz/python/easy/pythone4/
 https://www.kaitaku.xyz/mcipv6/
-https://www.kaitaku.xyz/python/easy/pythone2/

@@ -7,6 +7,17 @@
     "home_page_url": "https://www.kaitaku.xyz",
     "items": [
         {
+            "id": "https://www.kaitaku.xyz/english/quic/",
+            "url": "https://www.kaitaku.xyz/english/quic/",
+            "title": "This site has fully supported QUIC and HTTP/3",
+            "date_published": "2022-02-21T05:24:29.000Z",
+            "content_html": "<div class=\"note info\">\n<p>This page is translated. The chinese page is <a href=\"https://www.kaitaku.xyz/hexo/quic/\">here</a><br />\nIf you have a better translation, please send it to this email: <span class=\"exturl\" data-url=\"bWFpbHRvOnprejIwMDgxMjA0QDEyNi5jb20=\">zkz20081204@126.com</span></p>\n</div>\n<h1 id=\"quic-and-http3\"><a class=\"anchor\" href=\"#quic-and-http3\">#</a> QUIC and HTTP/3</h1>\n<h2 id=\"what-is-quic\"><a class=\"anchor\" href=\"#what-is-quic\">#</a> What is QUIC</h2>\n<p>QUIC is an abbreviation for Quick UDP Internet Connections and is currently divided into iQUIC and gQUIC. <br />\nQUIC is similar to TCP+TLS+HTTP/2 implemented at the kernel layer. But QUIC is based on UDP,<br />\nso it bypasses a lot of the cost of retrofitting TCP.<br />\nQUIC has several advantages over TLS+HTTP2：</p>\n<ul>\n<li>First handshake 1-RTT</li>\n<li>Improved TCP congestion</li>\n<li>Forward error correction to reduce retransmissions.</li>\n<li>Connections are smoothly migrated, and changes in network status do not affect connection disconnections.</li>\n</ul>\n<p>Schematic diagram of QUIC and HTTP/2+TLS:<br />\n<img data-src=\"https://pic.imgdb.cn/item/61fb6eff2ab3f51d91ffcff5.gif\" alt=\"\" /></p>\n<h2 id=\"why-use-quic\"><a class=\"anchor\" href=\"#why-use-quic\">#</a> Why use QUIC</h2>\n<p>HTTP/2+TLS1.3v has been deployed on this website, which can theoretically implement a 0-RTT handshake.<br />\nDUE TO QUIC's optimization of weak network environments, QUIC was deployed.<span class=\"spoiler\" title=\"你知道得太多了\">Because 4 times lost 1 transmission</span><br />\nAnother secondary reason is the speed, and I personally prefer the new protocol.</p>\n<p><strong>To be continued</strong></p>\n",
+            "tags": [
+                "hexo",
+                "hexo"
+            ]
+        },
+        {
             "id": "https://www.kaitaku.xyz/hexo/hexo2/",
             "url": "https://www.kaitaku.xyz/hexo/hexo2/",
             "title": "hexo教程2-配置与写作",

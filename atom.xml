@@ -8,8 +8,40 @@
     <author>
       <name>chou kaitaku</name>
     </author>
-    <updated>2022-02-12T08:53:20.000Z</updated>
+    <updated>2022-02-21T05:24:29.000Z</updated>
     <category term="python" />
+    <entry>
+        <id>https://www.kaitaku.xyz/english/quic/</id>
+        <title>This site has fully supported QUIC and HTTP/3</title>
+        <link rel="alternate" href="https://www.kaitaku.xyz/english/quic/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;This page is translated. The chinese page is &lt;a href=&#34;https://www.kaitaku.xyz/hexo/quic/&#34;&gt;here&lt;/a&gt;&lt;br /&gt;
+If you have a better translation, please send it to this email: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOnprejIwMDgxMjA0QDEyNi5jb20=&#34;&gt;zkz20081204@126.com&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;quic-and-http3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quic-and-http3&#34;&gt;#&lt;/a&gt; QUIC and HTTP/3&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#what-is-quic&#34;&gt;#&lt;/a&gt; What is QUIC&lt;/h2&gt;
+&lt;p&gt;QUIC is an abbreviation for Quick UDP Internet Connections and is currently divided into iQUIC and gQUIC. &lt;br /&gt;
+QUIC is similar to TCP+TLS+HTTP/2 implemented at the kernel layer. But QUIC is based on UDP,&lt;br /&gt;
+so it bypasses a lot of the cost of retrofitting TCP.&lt;br /&gt;
+QUIC has several advantages over TLS+HTTP2：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First handshake 1-RTT&lt;/li&gt;
+&lt;li&gt;Improved TCP congestion&lt;/li&gt;
+&lt;li&gt;Forward error correction to reduce retransmissions.&lt;/li&gt;
+&lt;li&gt;Connections are smoothly migrated, and changes in network status do not affect connection disconnections.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Schematic diagram of QUIC and HTTP/2+TLS:&lt;br /&gt;
+&lt;img data-src=&#34;https://pic.imgdb.cn/item/61fb6eff2ab3f51d91ffcff5.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;why-use-quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#why-use-quic&#34;&gt;#&lt;/a&gt; Why use QUIC&lt;/h2&gt;
+&lt;p&gt;HTTP/2+TLS1.3v has been deployed on this website, which can theoretically implement a 0-RTT handshake.&lt;br /&gt;
+DUE TO QUIC&#39;s optimization of weak network environments, QUIC was deployed.&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;Because 4 times lost 1 transmission&lt;/span&gt;&lt;br /&gt;
+Another secondary reason is the speed, and I personally prefer the new protocol.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To be continued&lt;/strong&gt;&lt;/p&gt;
+</content>
+        <category term="hexo" scheme="https://www.kaitaku.xyz/categories/hexo/" />
+        <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
+        <updated>2022-02-21T05:24:29.000Z</updated>
+    </entry>
     <entry>
         <id>https://www.kaitaku.xyz/hexo/hexo2/</id>
         <title>hexo教程2-配置与写作</title>
