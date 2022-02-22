@@ -4,7 +4,7 @@
   <url>
     <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
     
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -193,7 +193,7 @@
 
   <url>
     <loc>https://www.kaitaku.xyz/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,21 +201,21 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/MC/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/hexo/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/python/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -224,42 +224,42 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/mc/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/hexo/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/easy/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/english/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/english/hexo/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
