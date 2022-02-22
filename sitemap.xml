@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
+    
+    <lastmod>2022-02-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
     
     <lastmod>2022-02-22</lastmod>
@@ -220,6 +229,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
+    <lastmod>2022-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -259,6 +275,13 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/easy/</loc>
+    <lastmod>2022-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
     <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
