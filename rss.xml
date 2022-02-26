@@ -1261,7 +1261,9 @@ break 可以跳出循环，continue 可以跳过循环 \&lt;/p&gt;
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Tue, 11 Jan 2022 16:24:23 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;输出一段文字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输出一段文字&#34;&gt;#&lt;/a&gt; 输出一段文字&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;本篇为 python 中的输入输出和类型的基础概要、定义和判断类型。&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;输出一段文字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输出一段文字&#34;&gt;#&lt;/a&gt; 输出一段文字&lt;/h1&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;span&gt;PyCharm&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello world&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;print 为输出函数，会将括号内的值输出 &lt;br /&gt;
 &amp;quot;hello world&amp;quot; 为传入的值，类型为字符串 &lt;br /&gt;
 字符串内可以存储绝大部分文本 &lt;br /&gt;
@@ -1379,7 +1381,9 @@ python 中的变量不需要提前声明类型，需要时定义即可 &lt;br /&
             <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Mon, 10 Jan 2022 19:26:33 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;步骤1安装python解释器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤1安装python解释器&#34;&gt;#&lt;/a&gt; 步骤 1. 安装 python 解释器&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;本篇为 python3.10 解释器和 pycharm 的安装、汉化和配置。&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;步骤1安装python解释器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤1安装python解释器&#34;&gt;#&lt;/a&gt; 步骤 1. 安装 python 解释器&lt;/h1&gt;
 &lt;p&gt;前往 python 官网:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucHl0aG9uLm9yZy8=&#34;&gt; 点我直达&lt;/span&gt;&lt;br /&gt;
 选择 Download,All releases,3.10.1 &lt;br /&gt;
 请使用 IDM 系多线程下载器&lt;br /&gt;

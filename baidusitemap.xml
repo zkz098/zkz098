@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
+    <lastmod>2022-02-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
+    <lastmod>2022-02-26</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
     <lastmod>2022-02-22</lastmod>
   </url>
@@ -23,10 +31,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
     <lastmod>2022-02-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
-    <lastmod>2022-02-08</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
@@ -66,10 +70,6 @@
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/mcipv6/</loc>
-    <lastmod>2022-01-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
     <lastmod>2022-01-13</lastmod>
   </url>
 </urlset> 
