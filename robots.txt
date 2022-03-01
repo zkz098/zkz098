@@ -1,5 +1,3 @@
 User-agent: *
 Disallow: /about/
-Disallow: *.css$
-Disallow: *.js$
 Sitemap: https://www.kaitaku.xyz/sitemap.xml
