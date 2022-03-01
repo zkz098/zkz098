@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
+    
+    <lastmod>2022-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
     
     <lastmod>2022-03-01</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
     
     <lastmod>2022-02-22</lastmod>
     
