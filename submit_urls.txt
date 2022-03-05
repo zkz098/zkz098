@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/golang/go1/
 https://www.kaitaku.xyz/english/hexo/quic/
 https://www.kaitaku.xyz/hexo/quic/
 https://www.kaitaku.xyz/python/easy/pythone2/
