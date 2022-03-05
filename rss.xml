@@ -8,11 +8,11 @@
         <author>
           <name>chou kaitaku</name>
         </author>
-        <description>一个有一些python和mc文章的网站</description>
+        <description>一个python和go的编程笔记网站</description>
         <language>zh-CN</language>
         <pubDate>Sat, 05 Mar 2022 13:41:22 +0800</pubDate>
         <lastBuildDate>Sat, 05 Mar 2022 13:41:22 +0800</lastBuildDate>
-        <category term="python" />
+        <category term="python mc go" />
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/golang/go1/</guid>
             <title>go语言-配置和输出</title>
