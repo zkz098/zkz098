@@ -7,6 +7,17 @@
     "home_page_url": "https://www.kaitaku.xyz",
     "items": [
         {
+            "id": "https://www.kaitaku.xyz/golang/go2/",
+            "url": "https://www.kaitaku.xyz/golang/go2/",
+            "title": "go语言-语法和数据类型",
+            "date_published": "2022-03-05T12:31:31.000Z",
+            "content_html": "<h1 id=\"语法\"><a class=\"anchor\" href=\"#语法\">#</a> 语法</h1>\n<h2 id=\"行分隔符\"><a class=\"anchor\" href=\"#行分隔符\">#</a> 行分隔符</h2>\n",
+            "tags": [
+                "GO语言学习笔记",
+                "go"
+            ]
+        },
+        {
             "id": "https://www.kaitaku.xyz/golang/go1/",
             "url": "https://www.kaitaku.xyz/golang/go1/",
             "title": "go语言-配置和输出",
