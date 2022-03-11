@@ -449,7 +449,7 @@ QUIC has several advantages over TLS+HTTP2：&lt;/p&gt;
 &lt;li&gt;Connections are smoothly migrated, and changes in network status do not affect connection disconnections.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Schematic diagram of QUIC and HTTP/2+TLS:&lt;br /&gt;
-&lt;img data-src=&#34;https://pic.imgdb.cn/item/61fb6eff2ab3f51d91ffcff5.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202203/794af7dd-2a5f-45ef-ab23-93f65b045d82.png&#34; alt=&#34;100_1.png&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;why-use-quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#why-use-quic&#34;&gt;#&lt;/a&gt; Why use QUIC&lt;/h2&gt;
 &lt;p&gt;HTTP/2+TLS1.3v has been deployed on this website, which can theoretically implement a 0-RTT handshake.&lt;br /&gt;
 DUE TO QUIC&#39;s optimization of weak network environments, QUIC was deployed.&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;Because 4 times lost 1 transmission&lt;/span&gt;&lt;br /&gt;
@@ -594,7 +594,7 @@ Another secondary reason is the speed, and I personally prefer the new protocol.
 &lt;li&gt;连接平滑迁移，网络状态的变更不会影响连接断线&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;QUIC 与 HTTP/2+TLS 的示意图：&lt;br /&gt;
-&lt;img data-src=&#34;https://pic.imgdb.cn/item/61fb6eff2ab3f51d91ffcff5.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202203/794af7dd-2a5f-45ef-ab23-93f65b045d82.png&#34; alt=&#34;100_1.png&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;为什么部署quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么部署quic&#34;&gt;#&lt;/a&gt; 为什么部署 QUIC&lt;/h2&gt;
 &lt;p&gt;本网站已经部署了 HTTP/2+TLS1.3v, 理论上可以实现 0-RTT 握手&lt;br /&gt;
 但由于 QUIC 对&lt;strong&gt;弱网环境&lt;/strong&gt;的优化所以部署了 QUIC&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;4 次丢 1 次的离谱传输&lt;/span&gt;&lt;br /&gt;
@@ -625,9 +625,7 @@ Another secondary reason is the speed, and I personally prefer the new protocol.
 &lt;h3 id=&#34;验证quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#验证quic&#34;&gt;#&lt;/a&gt; 验证 QUIC&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;2022/2/6 更新&lt;/strong&gt;&lt;br /&gt;
 今天打开网页，发现 HTTP/2 and SPDY indicator 插件变成了绿色：&lt;br /&gt;
-&lt;img data-src=&#34;https://pic.imgdb.cn/item/61ff81532ab3f51d919df58b.png&#34; alt=&#34;&#34; /&gt; &lt;br /&gt;
 打开开发者工具查看：&lt;br /&gt;
-&lt;img data-src=&#34;https://pic.imgdb.cn/item/61ff819d2ab3f51d919e4861.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 发现几乎全部为 &lt;code&gt;http/3&lt;/code&gt;  协议，安全页也由 &lt;code&gt;TLS1.3&lt;/code&gt;  变成了 &lt;code&gt;QUIC&lt;/code&gt; &lt;br /&gt;
  后来发现是最开始没有打开 UDP443 端口导致 QUIC 握手一直失败，触发了浏览器的冷却期&lt;br /&gt;
 直到今天才结束，使用了 QUIC 握手&lt;br /&gt;

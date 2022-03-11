@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
+    
+    <lastmod>2022-03-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
+    
+    <lastmod>2022-03-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/golang/go3/</loc>
     
     <lastmod>2022-03-11</lastmod>
@@ -59,24 +77,6 @@
     <loc>https://www.kaitaku.xyz/about/index.html</loc>
     
     <lastmod>2022-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
-    
-    <lastmod>2022-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
-    
-    <lastmod>2022-03-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
