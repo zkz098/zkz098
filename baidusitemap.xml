@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/golang/go4/</loc>
     <lastmod>2022-03-16</lastmod>
   </url>
@@ -31,10 +35,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
     <lastmod>2022-02-26</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
-    <lastmod>2022-02-22</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
