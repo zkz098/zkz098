@@ -272,13 +272,6 @@
 
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/MC/</loc>
-    <lastmod>2022-03-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/tags/hexo/</loc>
     <lastmod>2022-03-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -286,7 +279,14 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
+    <loc>https://www.kaitaku.xyz/tags/MC/</loc>
+    <lastmod>2022-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/go/</loc>
     <lastmod>2022-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -300,7 +300,7 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/go/</loc>
+    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
     <lastmod>2022-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
