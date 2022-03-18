@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/python/app/pythona1/
 https://www.kaitaku.xyz/python/easy/pythone10/
 https://www.kaitaku.xyz/golang/go4/
 https://www.kaitaku.xyz/hexo/quic/
@@ -17,4 +18,3 @@ https://www.kaitaku.xyz/python/easy/pythone7/
 https://www.kaitaku.xyz/python/easy/pythone6/
 https://www.kaitaku.xyz/python/easy/pythone5p/
 https://www.kaitaku.xyz/python/easy/pythone5/
-https://www.kaitaku.xyz/python/easy/pythone3/
