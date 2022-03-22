@@ -1,3 +1,5 @@
+https://www.kaitaku.xyz/kotlin/kt1/
+https://www.kaitaku.xyz/hexo/hexo1/
 https://www.kaitaku.xyz/python/app/pythona1/
 https://www.kaitaku.xyz/python/easy/pythone10/
 https://www.kaitaku.xyz/golang/go4/
@@ -10,7 +12,6 @@ https://www.kaitaku.xyz/python/easy/pythone2/
 https://www.kaitaku.xyz/python/easy/pythone1/
 https://www.kaitaku.xyz/misc/antivirus/
 https://www.kaitaku.xyz/hexo/hexo2/
-https://www.kaitaku.xyz/hexo/hexo1/
 https://www.kaitaku.xyz/python/easy/pythone9p/
 https://www.kaitaku.xyz/python/easy/pythone9/
 https://www.kaitaku.xyz/python/easy/pythone8/
