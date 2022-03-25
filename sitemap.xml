@@ -92,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/english/hexo/quic/</loc>
-    
-    <lastmod>2022-03-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/golang/go3/</loc>
     
     <lastmod>2022-03-11</lastmod>
@@ -274,7 +265,7 @@
 
   <url>
     <loc>https://www.kaitaku.xyz/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -282,42 +273,42 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/MC/</loc>
-    <lastmod>2022-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/tags/go/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/hexo/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/kotlin/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/go/</loc>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/python/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -326,70 +317,56 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/mc/</loc>
-    <lastmod>2022-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/categories/golang/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/hexo/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/kotlin/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/misc/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/english/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <loc>https://www.kaitaku.xyz/categories/golang/</loc>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/</loc>
-    <lastmod>2022-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/categories/english/hexo/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/app/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/easy/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
