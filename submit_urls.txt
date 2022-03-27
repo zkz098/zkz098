@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/golang/go5/
 https://www.kaitaku.xyz/kotlin/kt1/
 https://www.kaitaku.xyz/hexo/hexo1/
 https://www.kaitaku.xyz/python/app/pythona1/
