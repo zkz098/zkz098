@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/updata/index.html</loc>
+    
+    <lastmod>2022-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/golang/go5/</loc>
     
     <lastmod>2022-03-27</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://www.kaitaku.xyz/manifest.json</loc>
     
     <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/updata/index.html</loc>
-    
-    <lastmod>2022-03-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
