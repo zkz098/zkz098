@@ -10,9 +10,62 @@
         </author>
         <description>一个python和go的编程笔记网站</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 27 Mar 2022 16:56:51 +0800</pubDate>
-        <lastBuildDate>Sun, 27 Mar 2022 16:56:51 +0800</lastBuildDate>
+        <pubDate>Sat, 09 Apr 2022 18:18:49 +0800</pubDate>
+        <lastBuildDate>Sat, 09 Apr 2022 18:18:49 +0800</lastBuildDate>
         <category term="python mc go kotlin" />
+        <item>
+            <guid isPermalink="true">https://www.kaitaku.xyz/misc/windbg/</guid>
+            <title>记一次用windbg分析蓝屏原因</title>
+            <link>https://www.kaitaku.xyz/misc/windbg/</link>
+            <category term="杂项" scheme="https://www.kaitaku.xyz/categories/misc/" />
+            <category term="windbg" scheme="https://www.kaitaku.xyz/tags/windbg/" />
+            <category term="windows" scheme="https://www.kaitaku.xyz/tags/windows/" />
+            <pubDate>Sat, 09 Apr 2022 18:18:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;这次帮一个朋友解决蓝屏，但无法进行现场检测&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;懒得出去&lt;/span&gt;，远程也看不到蓝屏代码&lt;br /&gt;
+只能使用 windbg 来分析内存文件检测蓝屏原因&lt;/p&gt;
+&lt;h1 id=&#34;windbg使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#windbg使用&#34;&gt;#&lt;/a&gt; windbg 使用&lt;/h1&gt;
+&lt;h2 id=&#34;下载和安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载和安装&#34;&gt;#&lt;/a&gt; 下载和安装&lt;/h2&gt;
+&lt;p&gt;本文使用 windowsSDK 进行安装，安装地址&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubWljcm9zb2Z0LmNvbS96aC1jbi93aW5kb3dzL2Rvd25sb2Fkcy93aW5kb3dzLXNkay8=&#34;&gt;点我&lt;/span&gt;&lt;br /&gt;
+进入后选择下载应用程序:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/9c3d11ff-6a92-4904-adbb-321b64c3b475.png&#34; alt=&#34;微软官网界面&#34; /&gt;&lt;br /&gt;
+选择下载路径:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/47b26ffb-9d54-4298-9a6f-860eb9d3ea60.png&#34; alt=&#34;SDK位置&#34; /&gt;&lt;br /&gt;
+勾选第二项即可:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/b05d765c-ca9d-4e69-a168-c5b12f4aa2a2.png&#34; alt=&#34;选择安装部分&#34; /&gt;&lt;br /&gt;
+安装完成后到下载路径 (下载路径 / Installers/X64 Debuggers And Tools-x64_en-us.msi) 双击安装即可&lt;/p&gt;
+&lt;h2 id=&#34;配置符号表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置符号表&#34;&gt;#&lt;/a&gt; 配置符号表&lt;/h2&gt;
+&lt;p&gt;在开始菜单内找到 windbg, 打开后界面点击 file-&amp;gt;Symbol File Path&lt;br /&gt;
+ 在弹出来的对话框内填入如下内容:&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;srv*c:\symbols*https:&amp;#x2F;&amp;#x2F;msdl.microsoft.com&amp;#x2F;download&amp;#x2F;symbols&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;选择 OK&lt;/p&gt;
+&lt;h2 id=&#34;开始分析崩溃文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始分析崩溃文件&#34;&gt;#&lt;/a&gt; 开始分析崩溃文件&lt;/h2&gt;
+&lt;p&gt;首先，你需要从目标电脑的 % SystemRoot%(一般为 C:/windows) 下找到 MEMORY.DMP 文件&lt;br /&gt;
+将其放到合适位置后，点击 File -&amp;gt; Open Crash Dump 选择崩溃文件&lt;br /&gt;
+弹出来的界面应该如下 (这个崩溃文件是 win7 SP1 的文件)&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/504b5ca4-35ee-485a-b7a6-5154aecabf02.png&#34; alt=&#34;image.png&#34; /&gt;&lt;br /&gt;
+ 然后输入 &lt;code&gt;!analyze -v&lt;/code&gt;  对文件进行深入分析&lt;br /&gt;
+然后看输出的内容:&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;*******************************************************************************&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;*                                                                             *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;*                        Bugcheck Analysis                                    *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;*                                                                             *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;*******************************************************************************&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;PAGE_FAULT_IN_NONPAGED_AREA (50)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Invalid system memory was referenced.  This cannot be protected by try-except.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Typically the address is just plain bad or it is pointing at freed memory.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Arguments:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Arg1: fffff8817cdadbc0, memory referenced.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Arg2: 0000000000000000, value 0 &amp;#x3D; read operation, 1 &amp;#x3D; write operation.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Arg3: fffff880088da185, If non-zero, the instruction address which referenced the bad memory&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	address.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Arg4: 0000000000000005, (reserved)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输出的第一行为崩溃原因，一般和 win10 的蓝屏代码是一致的&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;括号内的为 win7 版本，本案例就是 &lt;code&gt;0x0000050&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;这个代码的本意为崩溃原因和代码，并不只针对于 windows&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;然后就可以去搜索此错误代码了，一般有对应的解决方案&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本案例到最后也没查到根本原因🤣&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;但是，在下面还有一&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;亿&lt;/span&gt;些内容，在里面有两条比较重要的&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Unable to load image \SystemRoot\system32\DRIVERS\igdpmd64.sys, Win32 error 0n2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Unable to load image \SystemRoot\system32\DRIVERS\atikmpag.sys, Win32 error 0n2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这两条代表 &lt;code&gt;igdpmd64.sys&lt;/code&gt;  和 &lt;code&gt;atikmpag.sys&lt;/code&gt;  驱动是概率存在问题的&lt;br /&gt;
+后来收到了对方发来的蓝屏图片，里面的关键内容如下:&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;STOP: 0x00000050 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;igdpmd64.sys - Address FFFFF88007AE0185 base at XXXX...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;证实了是 &lt;code&gt;igdpmd64.sys&lt;/code&gt;  导致的蓝屏，并且代码为 50&lt;br /&gt;
+ 后查询得知这个是 AMD 显卡的驱动文件，结合蓝屏的使用经历 (屏幕共享功能导致), 基本可以得出是显卡驱动导致蓝屏&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;电脑上的显卡是 ATI radeon HD 7450M, 确实有亿点老&lt;/p&gt;
+&lt;/div&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/golang/go5/</guid>
             <title>go语言-函数与作用域</title>
@@ -1390,80 +1443,6 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;集合只能遍历，无法查询和使用索引&lt;/p&gt;
 &lt;/div&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/mcipv6/</guid>
-            <title>MC-IPV6联机</title>
-            <link>https://www.kaitaku.xyz/mcipv6/</link>
-            <category term="MC" scheme="https://www.kaitaku.xyz/categories/mc/" />
-            <category term="MC" scheme="https://www.kaitaku.xyz/tags/MC/" />
-            <pubDate>Thu, 13 Jan 2022 20:39:43 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;开始前的准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始前的准备&#34;&gt;#&lt;/a&gt; 开始前的准备&lt;/h1&gt;
-&lt;h2 id=&#34;游戏本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏本体&#34;&gt;#&lt;/a&gt; 游戏本体&lt;/h2&gt;
-&lt;p&gt;首先，双方需要使用一样的游戏版本和 ModLoader&lt;br /&gt;
- 推荐直接将游戏打包后发给对方&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;玩原版也需要安装 Forge/Fabric (后续步骤需要使用)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;如果需要安装模组，需要查看模组安装需求 (建议在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24v&#34;&gt; MCMOD 百科&lt;/span&gt;查看)&lt;br /&gt;
- 分为以下几种情况：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;客户端需装，服务端需装&lt;/li&gt;
-&lt;li&gt;客户端选装，服务端需装&lt;/li&gt;
-&lt;li&gt;客户端需装，服务端选装&lt;/li&gt;
-&lt;li&gt;客户端需装，服务端无效&lt;/li&gt;
-&lt;li&gt;客户端无效，服务端需装&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;1.2.3 情况建议双方都安装此模组&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;2. 情况主机端必装，其他人不装可能有影响&lt;br /&gt;
- 3. 情况所有人最好都装&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;4.5 情况无效端不需要装&lt;/p&gt;
-&lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;那么，什么是服务端和客户端？&lt;br /&gt;
-假设 S 为存档拥有者，C 为加入的玩家 &lt;br /&gt;
-即 S 为服务端 + 客户端，C 为客户端&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;游戏模组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏模组&#34;&gt;#&lt;/a&gt; 游戏模组&lt;/h2&gt;
-&lt;p&gt;版本截至 2022-1-13 时 &lt;br /&gt;
-安装对应版本的模组 (服务端，客户端均需)：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.15.2-1.18.1(forge/fabric)&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24vY2xhc3MvNDQ5OC5odG1s&#34;&gt;MCMOD 百科&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tb2RyaW50aC5jb20vbW9kL21jd2lmaXBucA==&#34;&gt;modrinth&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;1.12.2-1.17.1(forge)/1.14.4-1.17.1(fabric)&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24vY2xhc3MvMjc1NC5odG1s&#34;&gt;MCMOD 百科&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY3Vyc2Vmb3JnZS5jb20vbWluZWNyYWZ0L21jLW1vZHMvbGFuLXNlcnZlci1wcm9wZXJ0aWVz&#34;&gt;CurseForge&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;1.7.2-1.12.2(forge)&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWNtb2QuY24vY2xhc3MvMTE1OC5odG1s&#34;&gt;MCMOD 百科&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taW5lY3JhZnQuY3Vyc2Vmb3JnZS5jb20vcHJvamVjdHMvc2VydmVyLXByb3BlcnRpZXMtZm9yLWxhbg==&#34;&gt;CurseForge&lt;/span&gt;,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果你是离线登录，需要将 &lt;code&gt;OnlineMode&lt;/code&gt;  更改为 &lt;code&gt;false&lt;/code&gt; , 具体配置文件更改请参阅 MCMOD 百科&lt;br /&gt;
-建议安装第一个模组，有 GUI 页面&lt;/p&gt;
-&lt;h2 id=&#34;ipv6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ipv6&#34;&gt;#&lt;/a&gt; IPV6&lt;/h2&gt;
-&lt;p&gt;访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Rlc3RpcHY2LmNuLw==&#34;&gt;ipv6test&lt;/span&gt; 来检测双方的 IPV6&lt;br /&gt;
- 如果一切正常，你看到的页面应该类似于这样：&lt;br /&gt;
-&lt;img data-src=&#34;https://s2.loli.net/2022/01/13/BTxRUH26vQDN7yC.png&#34; alt=&#34;b.png&#34; /&gt;&lt;br /&gt;
- 底部应该是 10/10, 作者的 DNSv6 不太正常&lt;br /&gt;
-然后检查 IPV6 的 IP, 以下有几个 IP 开头的意义：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;fe80 开头的无法用于上网，作用就是有个 IP&lt;/li&gt;
-&lt;li&gt;2001 开头为 teredo, 不建议用于联机&lt;/li&gt;
-&lt;li&gt;240e、2409、2408 为国内三大运营商的 IPV6, 非常正常&lt;/li&gt;
-&lt;li&gt;其他开头请见下一步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果属于 fe80 或 2001 开头建议使用 &lt;code&gt;内网穿透&lt;/code&gt; 而非 IPV6&lt;br /&gt;
-&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt; 内网穿透短期不考虑出教程&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;确定 IP 后使用 &lt;code&gt;ping&lt;/code&gt;  指令 ping 一下对方，格式：&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ping 对方 IP&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果有链接超时或多数大于 250ms 就不建议使用此方法了&lt;br /&gt;
-如果可以链接成功，就可以进入下一步了&lt;/p&gt;
-&lt;h1 id=&#34;加入世界&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加入世界&#34;&gt;#&lt;/a&gt; 加入世界&lt;/h1&gt;
-&lt;p&gt;这一步非常的简单：&lt;br /&gt;
-服务端：单人游戏，进入存档后点击对局域网开放，记录下端口号&lt;br /&gt;
-客户端：启动游戏后，点击多人游戏，直接连接，使用以下格式连接：&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;[ipv6 地址]: 端口号&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后应该就可以快乐的联机了，出现错误请评论或自行百度解决&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
