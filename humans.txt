@@ -1,0 +1,13 @@
+/* TEAM */
+站长: chou kaitaku
+网站: www.kaitaku.xyz
+电子邮件: zkz20081204[at]126.com
+
+/* THANKS */
+Yume Shoka: shoka.lostyu.me
+Lavender's Blog: www.lavenderdh.cn
+
+/* SITE */
+最后更新: 2022/4/11
+标准: HTML5,CSS3,javascript
+组件: Hexo,HexoTheme-shoka

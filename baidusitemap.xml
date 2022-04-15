@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/python/app/pythonrsa/</loc>
+    <lastmod>2022-04-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
+    <lastmod>2022-04-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/hexo/hexo2/</loc>
+    <lastmod>2022-04-13</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/misc/windbg/</loc>
     <lastmod>2022-04-09</lastmod>
   </url>
@@ -55,14 +67,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
     <lastmod>2022-02-22</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/hexo/hexo2/</loc>
-    <lastmod>2022-02-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
-    <lastmod>2022-01-29</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone9/</loc>
