@@ -652,13 +652,16 @@ JDK17&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEud
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone10/</guid>
-            <title>python小白篇10-GUI和海龟库</title>
+            <title>python基础篇10-GUI和海龟库</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone10/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Tue, 22 Feb 2022 14:22:09 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;gui和绘图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#gui和绘图&#34;&gt;#&lt;/a&gt; GUI 和绘图&lt;/h1&gt;
+            <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;尚未完成&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;gui和绘图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#gui和绘图&#34;&gt;#&lt;/a&gt; GUI 和绘图&lt;/h1&gt;
 &lt;h2 id=&#34;tkinter&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tkinter&#34;&gt;#&lt;/a&gt; tkinter&lt;/h2&gt;
 &lt;h3 id=&#34;建一个窗口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建一个窗口&#34;&gt;#&lt;/a&gt; 建一个窗口&lt;/h3&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; tkinter &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; tk&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;window &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; tk&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Tk&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;geometry&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;500x300&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;title&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;my window&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;mainloop&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;tk.Tk&lt;/code&gt;  为 tkinter 的窗口基类，是所有 tkinter 窗口的基类&lt;br /&gt;
@@ -932,10 +935,10 @@ JDK17&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEud
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone9p/</guid>
-            <title>python小白篇9plus-第三方库</title>
+            <title>python基础篇9plus-第三方库</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone9p/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Sat, 29 Jan 2022 19:49:46 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;安装第三方库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装第三方库&#34;&gt;#&lt;/a&gt; 安装第三方库&lt;/h1&gt;
@@ -943,8 +946,12 @@ JDK17&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEud
 &lt;p&gt;首先在 PowerShell 执行以下命令：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip -V&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果返回值类似这样：&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip 21.2.4 from C:\Users\ 你的用户名 \AppData\Local\Programs\Python\Python310\lib\site-packages\pip (python 3.10)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;那证明 python 安装无误，如果出现 &lt;code&gt;无法将“pip”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确 ，然后再试一次。&lt;/code&gt;  &lt;br /&gt;
-请重新安装 python 或将 pip 添加到 path 中 &lt;br /&gt;
-可以安装一个 numpy 试一下：&lt;/p&gt;
+请重新安装 python 或将 pip 添加到 path 中 \&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;安装 python 时务必勾选 ADD PYTHON3.10 TO PATH &lt;br /&gt;
+添加环境变量可自行百度&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;可以安装一个 numpy 试一下：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; numpy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;出现 &lt;code&gt;Collecting numpy&lt;/code&gt;  则代表安装已经开始&lt;br /&gt;
 然后就会发现：这玩意的下载速度慢的离谱&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;堪比百毒网盘&lt;/span&gt;&lt;br /&gt;
 如何加速它是下一节的内容，先看一下安装完成后&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;可能需要 10 分钟左右&lt;/span&gt;&lt;/p&gt;
@@ -994,10 +1001,10 @@ JDK17&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEud
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone9/</guid>
-            <title>python小白篇9-面向对象与异常捕获</title>
+            <title>python基础篇9-面向对象与异常捕获</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone9/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Sat, 29 Jan 2022 11:22:22 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;面向对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向对象&#34;&gt;#&lt;/a&gt; 面向对象&lt;/h1&gt;
@@ -1064,10 +1071,10 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone8/</guid>
-            <title>python小白篇8-面向对象和生成器与迭代器</title>
+            <title>python基础篇8-面向对象和生成器、迭代器</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone8/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Thu, 27 Jan 2022 19:54:36 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;面向对象基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向对象基础&#34;&gt;#&lt;/a&gt; 面向对象基础&lt;/h1&gt;
@@ -1122,10 +1129,10 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone7/</guid>
-            <title>python小白篇7-递归与匿名函数</title>
+            <title>python基础篇7-递归与匿名函数</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone7/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Fri, 21 Jan 2022 11:56:59 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;递归&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h1&gt;
@@ -1174,10 +1181,10 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone6/</guid>
-            <title>python小白篇6-函数与作用域</title>
+            <title>python基础篇6-函数与作用域</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone6/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Tue, 18 Jan 2022 11:54:44 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h1&gt;
@@ -1239,10 +1246,10 @@ Built-in 内置作用域，简写为 B &lt;br /&gt;
         </item>
         <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone5p/</guid>
-            <title>python小白篇5plus-常用模块</title>
+            <title>python基础篇5plus-常用模块</title>
             <link>https://www.kaitaku.xyz/python/easy/pythone5p/</link>
             <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-            <category term="小白篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
             <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
             <pubDate>Sat, 15 Jan 2022 20:57:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;random-随机数库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#random-随机数库&#34;&gt;#&lt;/a&gt; random - 随机数库&lt;/h1&gt;
