@@ -46,7 +46,8 @@
 &lt;p&gt;python 中 RSA 库的加密是有长度上限的，一般为: RSA 位数 / 8/3 (或者 2) 个中文字符&lt;br /&gt;
  RSA 4.0 后已经删除了 bigfile 模块，后续可能会出一篇解决方案&lt;/p&gt;
 &lt;/div&gt;
-&lt;h1 id=&#34;rsa加密的正确流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rsa加密的正确流程&#34;&gt;#&lt;/a&gt; RSA 加密的正确流程&lt;/h1&gt;
+&lt;h1 id=&#34;rsa与其他算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rsa与其他算法&#34;&gt;#&lt;/a&gt; RSA 与其他算法&lt;/h1&gt;
+&lt;h2 id=&#34;rsa加密流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rsa加密流程&#34;&gt;#&lt;/a&gt; RSA 加密流程&lt;/h2&gt;
 &lt;p&gt;首先，加密双方必须生成一对秘钥对 (长度最好一致)&lt;br /&gt;
  然后互相交换 publickey 文件:&lt;br /&gt;
 &lt;img data-src=&#34;https://static.aichat.net/chat/202204/00d8d190-b3f2-4db9-a247-6e0042f7c7cb.png&#34; alt=&#34;加密的理想状态&#34; /&gt;&lt;br /&gt;
@@ -57,6 +58,24 @@
 此时，双方可以顺利的解密对方发来的数据并进行解密，但中间人呢？&lt;br /&gt;
 中间人手里只有密文和公钥，并无法进行解密，且不可能暴力破解 &lt;br /&gt;
 这样就实现了信息的安全传输，且私钥并没有外泄&lt;/p&gt;
+&lt;h2 id=&#34;aes算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#aes算法&#34;&gt;#&lt;/a&gt; AES 算法&lt;/h2&gt;
+&lt;p&gt;首先，AES 算法是对称加密算法，这意味着它加解密使用同一个秘钥&lt;br /&gt;
+现在有用户 A、B, 他们会通过网络交换密文:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/fecad802-5c72-4393-8021-7db40f599b8c.png&#34; alt=&#34;image.png&#34; /&gt;&lt;br /&gt;
+ 然后熟悉的中间人又出现了，他还是会监听并保存所有内容:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/2b075559-0aef-4fd4-9cfb-582c04a417db.png&#34; alt=&#34;image.png&#34; /&gt;&lt;br /&gt;
+ 交换秘钥和密文:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202204/a46a7723-0a04-414f-a75f-6d517bbd3043.png&#34; alt=&#34;image.png&#34; /&gt;&lt;br /&gt;
+ 这时中间人已经可以解密双方的密文了，所以 AES 并不适合在不安全网络下传播&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;算法各有优点，见总结部分&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;AES (对称加密) 算法更适用于在安全环境下加密大量数据 &lt;br /&gt;
+RSA (非对称加密) 算法适用于在不安全环境下加密少量数据&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;RSA 加密大量数据太慢了，大量数据可以试试 ECC (假如真的不想用 AES)&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;RSA 加密原理、大文件下一篇再说&lt;/p&gt;
 &lt;/div&gt;
@@ -824,7 +843,10 @@ JDK17&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEud
         <id>https://www.kaitaku.xyz/hexo/hexo1/</id>
         <title>hexo教程1-开发环境搭建</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/hexo/hexo1/"/>
-        <content type="html">&lt;h1 id=&#34;开发环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开发环境搭建&#34;&gt;#&lt;/a&gt; 开发环境搭建&lt;/h1&gt;
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;此文章正在重新整理，我不推荐您现在阅读它&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;开发环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开发环境搭建&#34;&gt;#&lt;/a&gt; 开发环境搭建&lt;/h1&gt;
 &lt;h2 id=&#34;nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodejs&#34;&gt;#&lt;/a&gt; node.js&lt;/h2&gt;
 &lt;p&gt;进入 node.js&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==&#34;&gt; 官网&lt;/span&gt;，下载 current 版 (如下图所示)&lt;br /&gt;
 &lt;img data-src=&#34;https://pic.imgdb.cn/item/62076c302ab3f51d91723eeb.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
@@ -872,10 +894,8 @@ JDK17&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEud
         <id>https://www.kaitaku.xyz/hexo/quic/</id>
         <title>本站已全面支持QUIC和HTTP/3</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/hexo/quic/"/>
-        <content type="html">&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;目前 QUIC 连接并不稳定，大概率使用 &lt;code&gt;http/2&lt;/code&gt;  进行连接 &lt;br /&gt;
-本站部署的是 iQUIC,h3-29 草案&lt;br /&gt;
-甲骨文云修好了，但套了层 CDN (cloudflare), 所以还是支持 quic 的&lt;/p&gt;
+        <content type="html">&lt;div class=&#34;note danger&#34;&gt;
+&lt;p&gt;本文当做 caddy2 安装教程就行，更换服务器后 QUIC 已经炸了&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;quic与http3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quic与http3&#34;&gt;#&lt;/a&gt; QUIC 与 HTTP3&lt;/h1&gt;
 &lt;h2 id=&#34;什么是quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是quic&#34;&gt;#&lt;/a&gt; 什么是 QUIC&lt;/h2&gt;
