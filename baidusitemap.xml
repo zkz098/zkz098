@@ -2,7 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
-    <lastmod>2022-05-14</lastmod>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/hexo/hexo2/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/hexo/hexo1/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
+    <lastmod>2022-05-15</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
@@ -11,10 +59,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokatwikoo/</loc>
     <lastmod>2022-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/hexo/hexo1/</loc>
-    <lastmod>2022-04-22</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/app/pythonrsa/</loc>
@@ -29,60 +73,12 @@
     <lastmod>2022-04-17</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/hexo/hexo2/</loc>
-    <lastmod>2022-04-13</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/misc/windbg/</loc>
     <lastmod>2022-04-09</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/golang/go5/</loc>
     <lastmod>2022-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/kotlin/kt1/</loc>
-    <lastmod>2022-03-21</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/app/pythona1/</loc>
