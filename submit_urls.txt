@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/golang/go5/
 https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/hexo/hexo2/
 https://www.kaitaku.xyz/hexo/hexo1/
@@ -17,7 +18,6 @@ https://www.kaitaku.xyz/python/app/pythonrsa/
 https://www.kaitaku.xyz/python/easy/pythone10/
 https://www.kaitaku.xyz/python/easy/pythone8/
 https://www.kaitaku.xyz/misc/windbg/
-https://www.kaitaku.xyz/golang/go5/
 https://www.kaitaku.xyz/python/app/pythona1/
 https://www.kaitaku.xyz/golang/go4/
 https://www.kaitaku.xyz/golang/go3/
