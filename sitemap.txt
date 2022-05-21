@@ -1,5 +1,8 @@
-https://www.kaitaku.xyz/python/easy/pythone3/
+https://www.kaitaku.xyz/about/index.html
+https://www.kaitaku.xyz/statistics/index.html
 https://www.kaitaku.xyz/updata/index.html
+https://www.kaitaku.xyz/admiration/index.html
+https://www.kaitaku.xyz/python/easy/pythone3/
 https://www.kaitaku.xyz/golang/go5/
 https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/hexo/hexo2/
@@ -13,7 +16,6 @@ https://www.kaitaku.xyz/python/easy/pythone5/
 https://www.kaitaku.xyz/python/easy/pythone4/
 https://www.kaitaku.xyz/python/easy/pythone2/
 https://www.kaitaku.xyz/python/easy/pythone1/
-https://www.kaitaku.xyz/about/index.html
 https://www.kaitaku.xyz/hexo/quic/
 https://www.kaitaku.xyz/webbuild/shokatwikoo/
 https://www.kaitaku.xyz/python/app/pythonrsa/
@@ -21,7 +23,6 @@ https://www.kaitaku.xyz/python/easy/pythone10/
 https://www.kaitaku.xyz/python/easy/pythone8/
 https://www.kaitaku.xyz/misc/windbg/
 https://www.kaitaku.xyz/404.html
-https://www.kaitaku.xyz/statistics/index.html
 https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/python/app/pythona1/
 https://www.kaitaku.xyz/golang/go4/
@@ -29,7 +30,6 @@ https://www.kaitaku.xyz/golang/go3/
 https://www.kaitaku.xyz/golang/go2/
 https://www.kaitaku.xyz/golang/go1/
 https://www.kaitaku.xyz/misc/antivirus/
-https://www.kaitaku.xyz/admiration/index.html
 https://www.kaitaku.xyz/mcipv6/
 https://www.kaitaku.xyz/
 https://www.kaitaku.xyz/tags/MC/

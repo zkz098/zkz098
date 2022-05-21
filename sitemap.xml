@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
+    <loc>https://www.kaitaku.xyz/about/index.html</loc>
     
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/statistics/index.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +21,24 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/updata/index.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/admiration/index.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
     
     <lastmod>2022-05-20</lastmod>
     
@@ -137,15 +164,6 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/about/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
     
     <lastmod>2022-05-14</lastmod>
@@ -209,15 +227,6 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/statistics/index.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/friends/index.html</loc>
     
     <lastmod>2022-03-18</lastmod>
@@ -275,15 +284,6 @@
     <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
     
     <lastmod>2022-02-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/admiration/index.html</loc>
-    
-    <lastmod>2022-02-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
