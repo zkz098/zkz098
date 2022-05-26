@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/webbuild/shokatwikoo/
 https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/webbuild/csp/
 https://www.kaitaku.xyz/python/easy/pythone3/
@@ -7,19 +8,3 @@ https://www.kaitaku.xyz/hexo/hexo1/
 https://www.kaitaku.xyz/python/easy/pythone9p/
 https://www.kaitaku.xyz/python/easy/pythone9/
 https://www.kaitaku.xyz/python/easy/pythone7/
-https://www.kaitaku.xyz/python/easy/pythone6/
-https://www.kaitaku.xyz/python/easy/pythone5p/
-https://www.kaitaku.xyz/python/easy/pythone5/
-https://www.kaitaku.xyz/python/easy/pythone4/
-https://www.kaitaku.xyz/python/easy/pythone2/
-https://www.kaitaku.xyz/python/easy/pythone1/
-https://www.kaitaku.xyz/hexo/quic/
-https://www.kaitaku.xyz/webbuild/shokatwikoo/
-https://www.kaitaku.xyz/python/app/pythonrsa/
-https://www.kaitaku.xyz/python/easy/pythone10/
-https://www.kaitaku.xyz/python/easy/pythone8/
-https://www.kaitaku.xyz/misc/windbg/
-https://www.kaitaku.xyz/python/app/pythona1/
-https://www.kaitaku.xyz/golang/go4/
-https://www.kaitaku.xyz/golang/go3/
-https://www.kaitaku.xyz/golang/go2/
