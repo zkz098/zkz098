@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/webbuild/shokapatch/
 https://www.kaitaku.xyz/updata/index.html
 https://www.kaitaku.xyz/webbuild/shokatwikoo/
 https://www.kaitaku.xyz/about/index.html
@@ -45,6 +46,8 @@ https://www.kaitaku.xyz/tags/python/
 https://www.kaitaku.xyz/tags/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/
 https://www.kaitaku.xyz/tags/%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5-csp/
 https://www.kaitaku.xyz/tags/%E7%BD%91%E7%AB%99%E9%98%B2%E5%BE%A1/
+https://www.kaitaku.xyz/tags/uglifyjs/
+https://www.kaitaku.xyz/tags/clipboard/
 https://www.kaitaku.xyz/categories/mc/
 https://www.kaitaku.xyz/categories/hexo/
 https://www.kaitaku.xyz/categories/golang/

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
+    
+    <lastmod>2022-05-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/updata/index.html</loc>
     
     <lastmod>2022-05-30</lastmod>
@@ -395,6 +404,20 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/%E7%BD%91%E7%AB%99%E9%98%B2%E5%BE%A1/</loc>
+    <lastmod>2022-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/uglifyjs/</loc>
+    <lastmod>2022-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/clipboard/</loc>
     <lastmod>2022-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
