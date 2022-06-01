@@ -21,8 +21,6 @@
             <title>shoka主题-对shoka主题的小修小补</title>
             <link>https://www.kaitaku.xyz/webbuild/shokapatch/</link>
             <category term="shoka" scheme="https://www.kaitaku.xyz/tags/shoka/" />
-            <category term="uglifyjs" scheme="https://www.kaitaku.xyz/tags/uglifyjs/" />
-            <category term="clipboard" scheme="https://www.kaitaku.xyz/tags/clipboard/" />
             <pubDate>Mon, 30 May 2022 19:58:57 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
 &lt;p&gt;最近摸了一个月鱼没有更新什么正经文章，基本都是 shoka 的改造&lt;br /&gt;
