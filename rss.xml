@@ -65,70 +65,6 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.kaitaku.xyz/webbuild/csp/</guid>
-            <title>使用CSP预防XSS攻击</title>
-            <link>https://www.kaitaku.xyz/webbuild/csp/</link>
-            <category term="网站建设" scheme="https://www.kaitaku.xyz/categories/webbuild/" />
-            <category term="内容安全策略(csp)" scheme="https://www.kaitaku.xyz/tags/%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5-csp/" />
-            <category term="网站防御" scheme="https://www.kaitaku.xyz/tags/%E7%BD%91%E7%AB%99%E9%98%B2%E5%BE%A1/" />
-            <pubDate>Sat, 21 May 2022 19:54:53 +0800</pubDate>
-            <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;参考自&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy93ZWIvaHR0cC9jc3A=&#34;&gt; MDN&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;csp是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#csp是什么&#34;&gt;#&lt;/a&gt; CSP 是什么&lt;/h1&gt;
-&lt;p&gt;内容安全策略 (CSP) 是一个额外的安全层，用于检测并削弱某些特定类型的攻击，包括跨站脚本和数据注入攻击等&lt;br /&gt;
-无论是数据盗取、网站内容污染还是散发恶意软件，这些攻击都是主要的手段&lt;/p&gt;
-&lt;h1 id=&#34;如何使用csp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何使用csp&#34;&gt;#&lt;/a&gt; 如何使用 CSP&lt;/h1&gt;
-&lt;h2 id=&#34;http和meta标头&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http和meta标头&#34;&gt;#&lt;/a&gt; HTTP 和 meta 标头&lt;/h2&gt;
-&lt;p&gt;你可以在 HTTP 请求头中加上如下内容:&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Content-Security-Policy: &amp;lt;策略&amp;gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果无法在 HTTP 中添加，可以在 HTML 的 meta 标签添加:&lt;/p&gt;
-&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;http-equiv&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;Content-Security-Policy&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&amp;lt;策略&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;最好在 HTTP 响应中添加，meta 标签有潜在安全风险&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#策略&#34;&gt;#&lt;/a&gt; 策略&lt;/h2&gt;
-&lt;h3 id=&#34;基础策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础策略&#34;&gt;#&lt;/a&gt; 基础策略&lt;/h3&gt;
-&lt;p&gt;一个网站只从他本身 (不含子域名) 加载文件，那可以使用以下策略:&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Content-Security-Policy: default-src &amp;#39;self&amp;#39;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;一个策略的格式:&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Content-Security-Policy: &amp;lt;策略&amp;gt; &amp;lt; 策略 &amp;gt; &amp;lt; 无限个策略 &amp;gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;策略可以使用以下几种:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;预设策略:
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;none&lt;/code&gt; : 不允许从任何网站加载资源 (常用于 frame 控制)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;self&lt;/code&gt; : 允许从网站本身 (不含子域名) 加载资源&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;unsafe-inline&lt;/code&gt; : 允许使用内联脚本 / 样式&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;unsafe-eval&lt;/code&gt; : 允许使用 eval 加载代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;nonce-&amp;lt;base64-value&amp;gt;&lt;/code&gt; : 允许一个指定了 base64 值的内联脚本 / 样式执行&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;hash-algorithm&amp;gt;-&amp;lt;base64-value&amp;gt;&lt;/code&gt; : 允许指定 hash 值的代码执行 (算法 - 值格式)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;域名策略:
-&lt;ul&gt;
-&lt;li&gt;指定协议头：如果需要使用 base64 图片，请加入 &lt;code&gt;data:&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;域名策略不需要使用单引号，支持 &lt;code&gt;*&lt;/code&gt;  通配符匹配&lt;/li&gt;
-&lt;li&gt;可以指定协议头，指定 &lt;code&gt;https://&lt;/code&gt;  后便只能通过 https 访问&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;策略类别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#策略类别&#34;&gt;#&lt;/a&gt; 策略类别&lt;/h3&gt;
-&lt;p&gt;例如一个网站，他只允许从自己的网站加载样式与脚本，但允许从任何地方加载图片 (包括 base64)&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Content-Security-Policy: default-src &amp;#39;self&amp;#39;; img-src * data:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这里 &lt;code&gt;default-src&lt;/code&gt;  就是默认策略，如果对应类别没有被定义，就使用此策略&lt;br /&gt;
- &lt;code&gt;img-src&lt;/code&gt;  就是针对于图片的策略&lt;br /&gt;
-在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy93ZWIvaHR0cC9jc3A=&#34;&gt; MDN&lt;/span&gt; 中有规则的详细列表&lt;/p&gt;
-&lt;h2 id=&#34;在shoka中使用csp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在shoka中使用csp&#34;&gt;#&lt;/a&gt; 在 shoka 中使用 CSP&lt;/h2&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;本策略仅适用于官方 shoka, 请根据自己需要改变规则&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;此规则并不完善，建议自行完善内联脚本部分&lt;/p&gt;
-&lt;/div&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;default-src &amp;#39;unsafe-inline&amp;#39; *.&amp;lt;yourblog&amp;gt; &amp;lt;leancloudDomain&amp;gt; &amp;lt;yourcdn&amp;gt;; frame-ancestors &amp;#39;none&amp;#39; ;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;img-src * data: ; font-src *.&amp;lt;yourblog&amp;gt; &amp;lt;yourfontcdn&amp;gt; &amp;lt;google 字体库 &amp;gt; at.alicdn.com ; style-src &amp;#39;unsafe-inline&amp;#39; &amp;lt;yourcdn&amp;gt; &amp;lt;google 字体库 &amp;gt;; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;script-src&amp;#39;self&amp;#39; &amp;#39;unsafe-inline&amp;#39; &amp;#39;unsafe-eval&amp;#39; hm.baidu.com fastly.jsdelivr.net *.&amp;lt;yourblog&amp;gt; cdn.polyfill.io;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;connect-src: *.&amp;lt;yourblog&amp;gt; ip.zxinc.org&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
-&lt;p&gt;带 &amp;lt;&amp;gt; 的是自己控制的变量&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;由于作者使用了 twikoo 评论系统，所以部分 valine 的依赖可能没有覆盖上&lt;br /&gt;
-可以在评论区和博主说一下&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://www.kaitaku.xyz/notice/</guid>
             <title>公告</title>
             <link>https://www.kaitaku.xyz/notice/</link>
@@ -1222,6 +1158,58 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; 函数名&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;参数&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    语句&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;yield&lt;/span&gt; 返回值&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    语句&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;与 return 不同，函数遇到 yield 后不会退出，在返回值后继续执行下面的代码&lt;br /&gt;
 所以可以有多个 yield, 返回值格式如下：&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;值 1 值 2 值 3 值 1 值 2 值 3...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://www.kaitaku.xyz/python/easy/pythone7/</guid>
+            <title>python基础篇7-递归与匿名函数</title>
+            <link>https://www.kaitaku.xyz/python/easy/pythone7/</link>
+            <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
+            <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+            <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
+            <pubDate>Fri, 21 Jan 2022 11:56:59 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;递归&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h1&gt;
+&lt;p&gt;递归是什么？&lt;br /&gt;
+ 举个例子：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    count &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; count&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; count &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; demo&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;demo&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 输出 99&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;约等于循环 99 次 + 1&lt;/span&gt;&lt;br /&gt;
+ 在函数中调用函数本身就是递归&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;递归必须要准备一个退出分支，例如本段的 &lt;code&gt;if n==100:&lt;/code&gt;  就是退出分支&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;如果没有退出分支：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    count &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; count &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; demo&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# RecursionError: maximum recursion depth exceeded&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;python 有最大递归深度，一般为&lt;strong&gt; 1000 层&lt;/strong&gt;，部分解释器由于配置可能会有 ±10 层的区别&lt;br /&gt;
+假如这个函数在正常情况的递归深度超过了 1000 层，可以使用下面的代码调整最大深度&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; sys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sys&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;setrecursionlimit&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10000&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 层数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后你就会发现：代码执行不完就会报错 &lt;code&gt;进程已结束,退出代码-1073741571 (0xC00000FD)&lt;/code&gt; &lt;br /&gt;
+ 这是因为栈溢出了，建议减少递归层数或进行&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9kMzY3NDZhZDg0NWQ=&#34;&gt;尾递归优化&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;生成器在后面会讲到&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;匿名表达式和函数变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#匿名表达式和函数变量&#34;&gt;#&lt;/a&gt; 匿名表达式和函数变量&lt;/h1&gt;
+&lt;h2 id=&#34;匿名表达式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#匿名表达式&#34;&gt;#&lt;/a&gt; 匿名表达式&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;lambda&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;这种写法 PEP 并不建议，它会建议使用 def 来实现效果，但部分情况下这样会徒增行数&lt;br /&gt;
+并不会增加可读性&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;匿名表达式格式： &lt;code&gt;lambda 输入:输出&lt;/code&gt; &lt;br /&gt;
+建议将 lambda 用于简易函数，大型函数使用 def&lt;/p&gt;
+&lt;h2 id=&#34;警卫&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#警卫&#34;&gt;#&lt;/a&gt; 警卫&lt;/h2&gt;
+&lt;p&gt;在 lambda 后可以使用 &lt;code&gt;if...else&lt;/code&gt;  (警卫) 来实现分支结构&lt;br /&gt;
+例子：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;lambda&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;警卫的格式： &lt;code&gt;返回值 if 条件 else 返回值(可以再套一个if)&lt;/code&gt; &lt;br /&gt;
+ 可用于 &lt;code&gt;return&lt;/code&gt;  等返回值的关键字后&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;套的层多了可读性很差&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;函数变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数变量&#34;&gt;#&lt;/a&gt; 函数变量&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;func &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; demo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;func&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;变量名 = 方法&lt;/code&gt; 即为函数变量格式&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;方法后不带括号，不然就是把返回值作为赋值对象&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;直接用 &lt;code&gt;变量名()&lt;/code&gt;  就可以调用方法&lt;/p&gt;
+&lt;h2 id=&#34;推导式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推导式&#34;&gt;#&lt;/a&gt; 推导式&lt;/h2&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;x &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; x &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;推导式格式： &lt;code&gt;表达式 for 变量 in 可迭代数据&lt;/code&gt; &lt;br /&gt;
+警卫同样适用于表达式，如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;x&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; x&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; x &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; x &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;下一篇讲迭代与生成器、面向对象概念&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
         </item>
     </channel>
 </rss>
