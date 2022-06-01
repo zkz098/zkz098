@@ -8,11 +8,115 @@
     <author>
       <name>chou kaitaku</name>
     </author>
-    <updated>2022-05-30T11:58:57.000Z</updated>
+    <updated>2022-06-01T05:15:31.000Z</updated>
     <category term="python" />
     <category term="go" />
     <category term="mc" />
     <category term="windbg" />
+    <entry>
+        <id>https://www.kaitaku.xyz/python/easy/pythonexe/</id>
+        <title>python打包exe-pyinstaller和nuitka</title>
+        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythonexe/"/>
+        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+&lt;p&gt;python 的编写十分简单，而且 linux 内置 python 解释器，无需额外安装&lt;br /&gt;
+但 windows 系统需要手动安装 python 解释器，一般来说会提高用户上手难度&lt;br /&gt;
+本文会介绍两种 python 文件打包为 exe 的方式&lt;/p&gt;
+&lt;h1 id=&#34;pyinstaller&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pyinstaller&#34;&gt;#&lt;/a&gt; pyinstaller&lt;/h1&gt;
+&lt;h2 id=&#34;基础操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础操作&#34;&gt;#&lt;/a&gt; 基础操作&lt;/h2&gt;
+&lt;p&gt;pyinstaller 是最常见的 python 文件打包器，也是最易于使用的&lt;br /&gt;
+先使用 pip 安装:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; pyinstaller&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后 cd 到你的 python 项目目录下，本次使用作者的网络工具箱测试:&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;工具箱包含了 requests、os、socket 等库，大约 300 行左右&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;假设这个文件为 &lt;code&gt;main.py&lt;/code&gt; , 下面进行打包:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pyinstaller -c main.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;随后开始漫长的打包，等到出现:&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;XXXXX INFO: Building COLLECT COLLECT-00.toc completed successfully.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;打包就完成了，可以前往 dist 文件夹下查看 &lt;code&gt;main.exe&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;进阶玩法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进阶玩法&#34;&gt;#&lt;/a&gt; 进阶玩法&lt;/h2&gt;
+&lt;h3 id=&#34;打包成单个exe&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#打包成单个exe&#34;&gt;#&lt;/a&gt; 打包成单个 exe&lt;/h3&gt;
+&lt;p&gt;刚刚打包出来的文件是一个文件夹，还需要二次压缩，可以变更一下指令:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pyinstaller -F -c main.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这样打包出来的就是一个 exe 文件了，体积会大一点&lt;/p&gt;
+&lt;h3 id=&#34;upx压缩&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#upx压缩&#34;&gt;#&lt;/a&gt; upx 压缩&lt;/h3&gt;
+&lt;p&gt;前往&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91cHguZ2l0aHViLmlvLw==&#34;&gt; upx 官网&lt;/span&gt; 下载 upx, 将 &lt;code&gt;upx.exe&lt;/code&gt;  放在项目目录下&lt;br /&gt;
+然后执行 &lt;code&gt;pyinstaller -F -c main.py&lt;/code&gt;  即可&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;upx 压缩后占用空间会小很多，但执行速度会慢一点 &lt;br /&gt;
+如果使用 numpy 等底层为 C 的第三方库，请不要使用 upx&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;nuitka&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nuitka&#34;&gt;#&lt;/a&gt; nuitka&lt;/h1&gt;
+&lt;p&gt;pyinstaller 打包十分简便，但也存在以下问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python 本身执行速度就很慢&lt;/li&gt;
+&lt;li&gt;执行速度较慢，比 python 还慢&lt;/li&gt;
+&lt;li&gt;反编译非常容易&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;一条龙 pyinstaller 反编译产业链了属于是&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而本次的 &lt;code&gt;nuitka&lt;/code&gt;  便可以解决上述的问题，它的会先将 python 文件转成 C&lt;ins&gt; 代码，随后进行编译 &lt;br /&gt;
+这就让 &lt;code&gt;nuitka&lt;/code&gt;  编译出的文件具有 C&lt;/ins&gt; 的速度和反反编译能力 \&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
+&lt;p&gt;先安装 nuitka:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; nuitka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后安装&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JyZWNodHNhbmRlcnMvd2lubGlic19taW5ndy9yZWxlYXNlcy90YWcvMTIuMS4wLTEwLjAuMC1tc3ZjcnQtcjE=&#34;&gt; winlibs&lt;/span&gt;&lt;br /&gt;
+ 注意事项:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;i686=32 位，x86_64=64 位&lt;/li&gt;
+&lt;li&gt;选择 7z 结尾的文件&lt;/li&gt;
+&lt;li&gt;如果太慢了，可以使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tb2V5eS5jbi9naC1wcm94eS8=&#34;&gt; moeyy 的 github 加速&lt;/span&gt; 进行加速&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;感谢 moeyy 提供的 github 加速服务&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;然后将这个文件夹放在任意位置，自行添加 path 到 &lt;code&gt;mingw64\bin&lt;/code&gt;  目录&lt;br /&gt;
+输入 &lt;code&gt;gcc --version&lt;/code&gt; , 如果有正常输出，就是成功了&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h2&gt;
+&lt;p&gt;打开你的项目文件，运行下列命令:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nuitka --mingw64 --standalone --show-progress --show-memory --output-dir&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;out main.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;选项的用途:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;选项&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;--mingw64&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定 mingw64 编译器编译，默认为 msvc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;--standalone&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定独立环境运行，不然无法独立运行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;--show-progress&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示编译进度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;--show-memory&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示占用内存&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;--output-dir&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定输出目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;随后，你的终端会和这个一样:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202206/454346ba-e5fa-49cc-8418-fe0cb9c6cf1f.png&#34; alt=&#34;image.png&#34; /&gt;&lt;br /&gt;
+ 在这里会弹出来一个选择，问你需不需要 ccache 进行加速，如果你的网络环境良好 (github 下载 2MB/S 以上) 可以输入 yes, 反之选 no&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;如果不是 ccache 可以参考第一步重新下载 winlibs&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;选择过后:&lt;br /&gt;
+&lt;img data-src=&#34;https://static.aichat.net/chat/202206/bc433154-3802-4727-823e-f6ac805184ca.png&#34; alt=&#34;image.png&#34; /&gt;&lt;br /&gt;
+ 随后等一段时间，编译就完成了，可以到 &lt;code&gt;out/main.dist&lt;/code&gt;  下找到 EXE 文件&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;nuitka 打包大项目还有其他选项，下一篇再细说&lt;/p&gt;
+&lt;/div&gt;
+</content>
+        <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
+        <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
+        <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
+        <updated>2022-06-01T05:15:31.000Z</updated>
+    </entry>
     <entry>
         <id>https://www.kaitaku.xyz/webbuild/shokapatch/</id>
         <title>shoka主题-对shoka主题的小修小补</title>
@@ -1153,57 +1257,5 @@ execpt 语法： &lt;code&gt;except 异常:&lt;/code&gt; &lt;br /&gt;
         <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
         <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
         <updated>2022-01-27T11:54:36.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://www.kaitaku.xyz/python/easy/pythone7/</id>
-        <title>python基础篇7-递归与匿名函数</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone7/"/>
-        <content type="html">&lt;h1 id=&#34;递归&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h1&gt;
-&lt;p&gt;递归是什么？&lt;br /&gt;
- 举个例子：&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    count &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; count&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; count &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; demo&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;demo&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 输出 99&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;约等于循环 99 次 + 1&lt;/span&gt;&lt;br /&gt;
- 在函数中调用函数本身就是递归&lt;/p&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;递归必须要准备一个退出分支，例如本段的 &lt;code&gt;if n==100:&lt;/code&gt;  就是退出分支&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;如果没有退出分支：&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    count &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; count &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; demo&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# RecursionError: maximum recursion depth exceeded&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;python 有最大递归深度，一般为&lt;strong&gt; 1000 层&lt;/strong&gt;，部分解释器由于配置可能会有 ±10 层的区别&lt;br /&gt;
-假如这个函数在正常情况的递归深度超过了 1000 层，可以使用下面的代码调整最大深度&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; sys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sys&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;setrecursionlimit&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10000&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 层数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后你就会发现：代码执行不完就会报错 &lt;code&gt;进程已结束,退出代码-1073741571 (0xC00000FD)&lt;/code&gt; &lt;br /&gt;
- 这是因为栈溢出了，建议减少递归层数或进行&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9kMzY3NDZhZDg0NWQ=&#34;&gt;尾递归优化&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;生成器在后面会讲到&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;匿名表达式和函数变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#匿名表达式和函数变量&#34;&gt;#&lt;/a&gt; 匿名表达式和函数变量&lt;/h1&gt;
-&lt;h2 id=&#34;匿名表达式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#匿名表达式&#34;&gt;#&lt;/a&gt; 匿名表达式&lt;/h2&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;lambda&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;这种写法 PEP 并不建议，它会建议使用 def 来实现效果，但部分情况下这样会徒增行数&lt;br /&gt;
-并不会增加可读性&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;匿名表达式格式： &lt;code&gt;lambda 输入:输出&lt;/code&gt; &lt;br /&gt;
-建议将 lambda 用于简易函数，大型函数使用 def&lt;/p&gt;
-&lt;h2 id=&#34;警卫&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#警卫&#34;&gt;#&lt;/a&gt; 警卫&lt;/h2&gt;
-&lt;p&gt;在 lambda 后可以使用 &lt;code&gt;if...else&lt;/code&gt;  (警卫) 来实现分支结构&lt;br /&gt;
-例子：&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;lambda&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;警卫的格式： &lt;code&gt;返回值 if 条件 else 返回值(可以再套一个if)&lt;/code&gt; &lt;br /&gt;
- 可用于 &lt;code&gt;return&lt;/code&gt;  等返回值的关键字后&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;套的层多了可读性很差&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;函数变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数变量&#34;&gt;#&lt;/a&gt; 函数变量&lt;/h2&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;func &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; demo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;func&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;变量名 = 方法&lt;/code&gt; 即为函数变量格式&lt;/p&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;方法后不带括号，不然就是把返回值作为赋值对象&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;直接用 &lt;code&gt;变量名()&lt;/code&gt;  就可以调用方法&lt;/p&gt;
-&lt;h2 id=&#34;推导式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推导式&#34;&gt;#&lt;/a&gt; 推导式&lt;/h2&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;x &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; x &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;推导式格式： &lt;code&gt;表达式 for 变量 in 可迭代数据&lt;/code&gt; &lt;br /&gt;
-警卫同样适用于表达式，如下：&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;x&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; x&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; x &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; x &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;下一篇讲迭代与生成器、面向对象概念&lt;/span&gt;&lt;/p&gt;
-</content>
-        <category term="python" scheme="https://www.kaitaku.xyz/categories/python/" />
-        <category term="基础篇" scheme="https://www.kaitaku.xyz/categories/python/easy/" />
-        <category term="python" scheme="https://www.kaitaku.xyz/tags/python/" />
-        <updated>2022-01-21T03:56:59.000Z</updated>
     </entry>
 </feed>

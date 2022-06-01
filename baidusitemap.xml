@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
+    <lastmod>2022-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
+    <lastmod>2022-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
+    <lastmod>2022-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
+    <lastmod>2022-06-01</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
     <lastmod>2022-06-01</lastmod>
   </url>
@@ -11,10 +27,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
     <lastmod>2022-05-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
-    <lastmod>2022-05-20</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/golang/go5/</loc>
@@ -54,14 +66,6 @@
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
     <lastmod>2022-05-15</lastmod>
   </url>
   <url>
