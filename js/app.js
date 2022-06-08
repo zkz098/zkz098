@@ -1742,10 +1742,10 @@ const postFancybox = function (p) {
 
             $.each(p + ' .md img:not(.emoji):not(.vemoji)', function (element) {
                 const $image = q(element);
+                const imageLink = $image.attr('data-src') || $image.attr('src');
                 const $imageWrapLink = $image.wrap('<a class="fancybox" href="' + imageLink + '" itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>').parent('a');
                 let info, captionClass = 'image-info';
                 if (!$image.is('a img')) {
-                    const imageLink = $image.attr('data-src') || $image.attr('src');
                     $image.data('safe-src', imageLink)
                     if (!$image.is('.gallery img')) {
                         $imageWrapLink.attr('data-fancybox', 'default').attr('rel', 'default');
