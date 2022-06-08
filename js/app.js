@@ -1741,8 +1741,8 @@ const postFancybox = function (p) {
             });
 
             $.each(p + ' .md img:not(.emoji):not(.vemoji)', function (element) {
-                const $imageWrapLink = $image.wrap('<a class="fancybox" href="' + imageLink + '" itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>').parent('a');
                 const $image = q(element);
+                const $imageWrapLink = $image.wrap('<a class="fancybox" href="' + imageLink + '" itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>').parent('a');
                 let info, captionClass = 'image-info';
                 if (!$image.is('a img')) {
                     const imageLink = $image.attr('data-src') || $image.attr('src');
@@ -1844,7 +1844,7 @@ const postBeauty = function () {
     });
 
     $.each('figure.highlight', function (element) {
-
+        const code_container = element.child('.code-container');
         const showBtn = code_container.child('.show-btn');
         const hideCode = function () {
             code_container.style.maxHeight = "300px"
@@ -1854,7 +1854,6 @@ const postBeauty = function () {
             code_container.style.maxHeight = ""
             showBtn.addClass('open')
         };
-        const code_container = element.child('.code-container');
         const caption = element.child('figcaption');
 
         element.insertAdjacentHTML('beforeend', '<div class="operation"><span class="breakline-btn"><i class="ic i-align-left"></i></span><span class="copy-btn"><i class="ic i-clipboard"></i></span><span class="fullscreen-btn"><i class="ic i-expand"></i></span></div>');
