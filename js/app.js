@@ -1845,7 +1845,7 @@ const postBeauty = function () {
 
     $.each('figure.highlight', function (element) {
         const code_container = element.child('.code-container'); // 放到这
-        const showBtn = code_container.getElementsByClassName('show-btn')
+        const showBtn = code_container.getElementsByClassName('show-btn')[0]
         // const showBtn = code_container.child('.show-btn');
         const hideCode = function () {
             code_container.style.maxHeight = "300px"
