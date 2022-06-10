@@ -1844,10 +1844,8 @@ const postBeauty = function () {
     });
 
     $.each('figure.highlight', function (element) {
-        var code_container = element.getElementsByClassName('code-container')[0] // 放到这
-        // var code_container = element.child('.code-container'); // 放到这
-        var showBtn = code_container.getElementsByClassName('show-btn')[0]
-        // const showBtn = code_container.child('.show-btn');
+        const code_container = element.child('.code-container'); // 放到这
+        const showBtn = code_container.child('.show-btn');
         const hideCode = function () {
             code_container.style.maxHeight = "300px"
             showBtn.removeClass('open')
