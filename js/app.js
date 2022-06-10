@@ -1918,7 +1918,7 @@ const postBeauty = function () {
         fullscreenBtn.addEventListener('click', fullscreenHandle);
         caption && caption.addEventListener('click', fullscreenHandle);
 
-        if (code_container && code_container.find("tr").length > 15) {
+        if (code_container && code_container.find("tr").length > 15 && showBtn!==null) {
 
             code_container.style.maxHeight = "300px";
             code_container.insertAdjacentHTML('beforeend', '<div class="show-btn"><i class="ic i-angle-down"></i></div>');
