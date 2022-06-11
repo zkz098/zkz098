@@ -1844,34 +1844,25 @@ const postBeauty = function () {
     });
 
     $.each('figure.highlight', function (element) {
-        // TODO 修复这个Bug
-        const code_container = element.child('.code-container'); // 放到这
-        let showBtn = code_container.child('.show-btn');
-        const hideCode = function () {
-            code_container.style.maxHeight = "300px"
-            showBtn.removeClass('open')
-        };
-        const showCode = function () {
-            code_container.style.maxHeight = ""
-            showBtn.addClass('open')
-        };
+
+        const code_container = element.child('.code-container');
         const caption = element.child('figcaption');
 
         element.insertAdjacentHTML('beforeend', '<div class="operation"><span class="breakline-btn"><i class="ic i-align-left"></i></span><span class="copy-btn"><i class="ic i-clipboard"></i></span><span class="fullscreen-btn"><i class="ic i-expand"></i></span></div>');
 
         const copyBtn = element.child('.copy-btn');
-        if (LOCAL.nocopy) {
+        if(LOCAL.nocopy) {
             copyBtn.remove()
         } else {
             copyBtn.addEventListener('click', function (event) {
                 const target = event.currentTarget;
                 let comma = '', code = '';
-                code_container.find('pre').forEach(function (line) {
+                code_container.find('pre').forEach(function(line) {
                     code += comma + line.innerText;
                     comma = '\n'
                 })
 
-                clipBoard(code, function (result) {
+                clipBoard(code, function(result) {
                     target.child('.ic').className = result ? 'ic i-check' : 'ic i-times';
                     target.blur();
                     showtip(LOCAL.copyright);
@@ -1919,17 +1910,23 @@ const postBeauty = function () {
         fullscreenBtn.addEventListener('click', fullscreenHandle);
         caption && caption.addEventListener('click', fullscreenHandle);
 
-        if (showBtn===null) {
-            showBtn = code_container.child('.show-btn'); // TODO 测试性分支
-            console.log(code_container.child('.show-btn'))
-        }
-        if (code_container && code_container.find("tr").length > 15 ) { // && showBtn!==null
+        if(code_container && code_container.find("tr").length > 15) {
 
             code_container.style.maxHeight = "300px";
             code_container.insertAdjacentHTML('beforeend', '<div class="show-btn"><i class="ic i-angle-down"></i></div>');
+            const showBtn = code_container.child('.show-btn');
 
+            const showCode = function() {
+                code_container.style.maxHeight = ""
+                showBtn.addClass('open')
+            }
 
-            showBtn.addEventListener('click', function (event) {
+            const hideCode = function() {
+                code_container.style.maxHeight = "300px"
+                showBtn.removeClass('open')
+            }
+
+            showBtn.addEventListener('click', function(event) {
                 if (showBtn.hasClass('open')) {
                     removeFullscreen()
                     hideCode()

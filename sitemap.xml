@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.kaitaku.xyz/friends/index.html</loc>
+    <loc>https://www.kaitaku.xyz/updata/index.html</loc>
     
-    <lastmod>2022-06-10</lastmod>
+    <lastmod>2022-06-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/updata/index.html</loc>
+    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
+    
+    <lastmod>2022-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/friends/index.html</loc>
     
     <lastmod>2022-06-10</lastmod>
     
@@ -41,15 +50,6 @@
     <loc>https://www.kaitaku.xyz/notice/</loc>
     
     <lastmod>2022-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
-    
-    <lastmod>2022-06-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
