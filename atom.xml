@@ -122,7 +122,10 @@
         <id>https://www.kaitaku.xyz/webbuild/shokapatch/</id>
         <title>shoka主题-对shoka主题的小修小补</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/webbuild/shokapatch/"/>
-        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本篇为本站 LTS 文章，会长期更新&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
 &lt;p&gt;最近摸了一个月鱼没有更新什么正经文章，基本都是 shoka 的改造&lt;br /&gt;
 近期在&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;摸鱼&lt;/span&gt;时发现 shoka 主题的 js 有近 200 个弱警告和 10 余个警告，就想处理一下这些警告&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
@@ -185,7 +188,7 @@
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_2&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_2&#34;&gt; 给 twikoo 加亿点表情&lt;/label&gt;&lt;/li&gt;
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_3&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_3&#34;&gt; 写个更友好的 404 界面&lt;/label&gt;&lt;/li&gt;
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_4&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_4&#34;&gt; 为 googleAds 做准备 (长期计划)&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; 加入亿点点毛玻璃特效！！¿!!&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; 加入亿点点毛玻璃特效 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;¿&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
         <updated>2022-05-14T00:35:17.000Z</updated>
