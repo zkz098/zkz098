@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/webbuild/nginx-quic/</loc>
+    <lastmod>2022-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone8/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokatwikoo/</loc>
     <lastmod>2022-06-29</lastmod>
   </url>
@@ -13,19 +41,11 @@
     <lastmod>2022-06-22</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
-    <lastmod>2022-06-02</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
     <lastmod>2022-06-01</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
-    <lastmod>2022-06-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
     <lastmod>2022-06-01</lastmod>
   </url>
   <url>
@@ -49,19 +69,7 @@
     <lastmod>2022-05-15</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
     <lastmod>2022-05-15</lastmod>
   </url>
   <url>
@@ -78,10 +86,6 @@
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
-    <lastmod>2022-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone8/</loc>
     <lastmod>2022-04-17</lastmod>
   </url>
   <url>
