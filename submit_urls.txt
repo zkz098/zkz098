@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/python/easy/pythone4/
 https://www.kaitaku.xyz/webbuild/nginx-quic/
 https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/python/easy/pythone9p/
@@ -7,4 +8,3 @@ https://www.kaitaku.xyz/python/easy/pythone7/
 https://www.kaitaku.xyz/python/easy/pythone2/
 https://www.kaitaku.xyz/python/easy/pythone5/
 https://www.kaitaku.xyz/webbuild/shokatwikoo/
-https://www.kaitaku.xyz/webbuild/shokapatch/
