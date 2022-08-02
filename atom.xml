@@ -128,9 +128,6 @@ A: 尝试卸载宝塔 nginx 防火墙试试&lt;/p&gt;
 &lt;li&gt;选择 7z 结尾的文件&lt;/li&gt;
 &lt;li&gt;如果太慢了，可以使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tb2V5eS5jbi9naC1wcm94eS8=&#34;&gt; moeyy 的 github 加速&lt;/span&gt; 进行加速&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;感谢 moeyy 提供的 github 加速服务&lt;/p&gt;
-&lt;/div&gt;
 &lt;p&gt;然后将这个文件夹放在任意位置，自行添加 path 到 &lt;code&gt;mingw64\bin&lt;/code&gt;  目录&lt;br /&gt;
 输入 &lt;code&gt;gcc --version&lt;/code&gt; , 如果有正常输出，就是成功了&lt;/p&gt;
 &lt;h2 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h2&gt;
@@ -245,8 +242,7 @@ A: 尝试卸载宝塔 nginx 防火墙试试&lt;/p&gt;
         <content type="html">&lt;h1 id=&#34;本站公告&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本站公告&#34;&gt;#&lt;/a&gt; 本站公告&lt;/h1&gt;
 &lt;h2 id=&#34;公告区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#公告区&#34;&gt;#&lt;/a&gt; 公告区&lt;/h2&gt;
 &lt;h3 id=&#34;维护计划&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#维护计划&#34;&gt;#&lt;/a&gt; 维护计划&lt;/h3&gt;
-&lt;p&gt;本站评论系统于 2022/7/31 晚 6 点开始维护 &lt;br /&gt;
-预计需要 3 天维护完成，期间评论系统无法使用&lt;/p&gt;
+&lt;p&gt;无&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;更新计划&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新计划&#34;&gt;#&lt;/a&gt; 更新计划&lt;/h2&gt;
 &lt;ul class=&#34;task-list&#34;&gt;
@@ -254,8 +250,7 @@ A: 尝试卸载宝塔 nginx 防火墙试试&lt;/p&gt;
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_1&#34;&gt; 再逝逝 QUIC-nginx&lt;/label&gt;&lt;/li&gt;
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_2&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_2&#34;&gt; 给 twikoo 加亿点表情&lt;/label&gt;&lt;/li&gt;
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_3&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_3&#34;&gt; 写个更友好的 404 界面&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_4&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_4&#34;&gt; 为 googleAds 做准备 (长期计划)&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; 加入亿点点毛玻璃特效 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;¿&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_4&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_4&#34;&gt; 加入亿点点毛玻璃特效 &lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;¿&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
         <updated>2022-05-14T00:35:17.000Z</updated>
@@ -870,7 +865,7 @@ RSA (非对称加密) 算法适用于在不安全环境下加密少量数据&lt;
     </entry>
     <entry>
         <id>https://www.kaitaku.xyz/python/easy/pythone10/</id>
-        <title>python基础篇10-GUI和海龟库</title>
+        <title>python-GUI和海龟库</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone10/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;尚未完成&lt;/p&gt;
@@ -1160,7 +1155,7 @@ RSA (非对称加密) 算法适用于在不安全环境下加密少量数据&lt;
     </entry>
     <entry>
         <id>https://www.kaitaku.xyz/python/easy/pythone9p/</id>
-        <title>python基础篇9plus-第三方库</title>
+        <title>python-第三方库</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone9p/"/>
         <content type="html">&lt;h1 id=&#34;安装第三方库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装第三方库&#34;&gt;#&lt;/a&gt; 安装第三方库&lt;/h1&gt;
 &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
@@ -1239,7 +1234,7 @@ RSA (非对称加密) 算法适用于在不安全环境下加密少量数据&lt;
     </entry>
     <entry>
         <id>https://www.kaitaku.xyz/python/easy/pythone9/</id>
-        <title>python基础篇9-面向对象与异常捕获</title>
+        <title>python-面向对象与异常捕获</title>
         <link rel="alternate" href="https://www.kaitaku.xyz/python/easy/pythone9/"/>
         <content type="html">&lt;h1 id=&#34;面向对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向对象&#34;&gt;#&lt;/a&gt; 面向对象&lt;/h1&gt;
 &lt;h2 id=&#34;类方法和静态方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类方法和静态方法&#34;&gt;#&lt;/a&gt; 类方法和静态方法&lt;/h2&gt;

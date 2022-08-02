@@ -2,7 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
-    <lastmod>2022-07-31</lastmod>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/mcipv6/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone8/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
+    <lastmod>2022-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
+    <lastmod>2022-08-02</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokatwikoo/</loc>
@@ -13,48 +65,12 @@
     <lastmod>2022-07-26</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
-    <lastmod>2022-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
-    <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone8/</loc>
-    <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
-    <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
-    <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
-    <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
     <lastmod>2022-07-13</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
     <lastmod>2022-06-22</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
-    <lastmod>2022-06-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
-    <lastmod>2022-06-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
-    <lastmod>2022-06-01</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/golang/go5/</loc>
@@ -69,24 +85,12 @@
     <lastmod>2022-05-15</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
-    <lastmod>2022-05-15</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/hexo/quic/</loc>
     <lastmod>2022-05-14</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/app/pythonrsa/</loc>
     <lastmod>2022-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
-    <lastmod>2022-04-17</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/misc/windbg/</loc>
@@ -115,9 +119,5 @@
   <url>
     <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
     <lastmod>2022-02-22</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/mcipv6/</loc>
-    <lastmod>2022-01-13</lastmod>
   </url>
 </urlset> 
