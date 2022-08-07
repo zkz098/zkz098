@@ -54,5 +54,5 @@ https://www.kaitaku.xyz/categories/hexo/
 https://www.kaitaku.xyz/categories/misc/
 https://www.kaitaku.xyz/categories/webbuild/
 https://www.kaitaku.xyz/categories/python/
-https://www.kaitaku.xyz/categories/python/app/
 https://www.kaitaku.xyz/categories/python/easy/
+https://www.kaitaku.xyz/categories/python/app/
