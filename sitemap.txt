@@ -43,8 +43,8 @@ https://www.kaitaku.xyz/tags/hexo/
 https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/
 https://www.kaitaku.xyz/tags/windbg/
 https://www.kaitaku.xyz/tags/windows/
-https://www.kaitaku.xyz/tags/shoka/
 https://www.kaitaku.xyz/tags/quic/
+https://www.kaitaku.xyz/tags/shoka/
 https://www.kaitaku.xyz/tags/twikoo/
 https://www.kaitaku.xyz/tags/python/
 https://www.kaitaku.xyz/tags/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/
@@ -54,5 +54,5 @@ https://www.kaitaku.xyz/categories/hexo/
 https://www.kaitaku.xyz/categories/misc/
 https://www.kaitaku.xyz/categories/webbuild/
 https://www.kaitaku.xyz/categories/python/
-https://www.kaitaku.xyz/categories/python/easy/
 https://www.kaitaku.xyz/categories/python/app/
+https://www.kaitaku.xyz/categories/python/easy/

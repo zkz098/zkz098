@@ -2,7 +2,9 @@ const handle = async(req)=>{
     const domain = req.url.split('/')[2];
     console.log(`fetch ${domain}`)
     if (domain.match("fundingchoicesmessages.google.com")){
-        return fetch(req.url.replace("https://fundingchoicesmessages.google.com", "https://adsenseabc.vercel.app"))
+        return fetch(req.url.replace("https://fundingchoicesmessages.google.com", "https://adsenseabc.vercel.app"),{
+            mode: "no-cors"
+        })
     } else {
         return fetch(req)
     }
