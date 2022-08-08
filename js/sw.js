@@ -9,5 +9,9 @@ const handle = async(req)=>{
 }
 
 self.addEventListener('fetch', async event => {
-    event.respondWith(handle(event.request))
+    try {
+        event.respondWith(handle(event.request))
+    } catch (msg){
+        console.log(msg)
+    }
 });
