@@ -381,13 +381,6 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/quic/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/tags/windbg/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -402,6 +395,13 @@
   </url>
   
   <url>
+    <loc>https://www.kaitaku.xyz/tags/quic/</loc>
+    <lastmod>2022-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/tags/shoka/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -409,14 +409,14 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/python/</loc>
+    <loc>https://www.kaitaku.xyz/tags/twikoo/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/twikoo/</loc>
+    <loc>https://www.kaitaku.xyz/tags/python/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
