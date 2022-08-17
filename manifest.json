@@ -1,1 +1,1 @@
-{"name":"kaitaku's blog","short_name":"望月阁","theme_color":"#222222","background_color":"#2196f3","display":"standalone","scope":"/","start_url":"/"}
+{"name":"kaitaku's blog","short_name":"望月阁","theme_color":"#222222","background_color":"#2196f3","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/favicon.ico","sizes":"32x32","type":"image/x-icon"},{"src":"/images/apple-touch-icon.png","sizes":"144x144","type":"image/png"}],"splash_pages":null}
