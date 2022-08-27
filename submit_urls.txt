@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/webbuild/shokajsdelivr/
 https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/
 https://www.kaitaku.xyz/webbuild/nginx-quic/
 https://www.kaitaku.xyz/webbuild/quic/
@@ -7,4 +8,3 @@ https://www.kaitaku.xyz/mcipv6/
 https://www.kaitaku.xyz/python/easy/pythonexe/
 https://www.kaitaku.xyz/python/easy/pythone9/
 https://www.kaitaku.xyz/python/easy/pythone9p/
-https://www.kaitaku.xyz/python/easy/pythone5p/

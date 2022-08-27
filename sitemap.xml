@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokajsdelivr/</loc>
+    
+    <lastmod>2022-08-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/friends/index.html</loc>
     
     <lastmod>2022-08-27</lastmod>
@@ -376,7 +385,21 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
+    <loc>https://www.kaitaku.xyz/tags/quic/</loc>
+    <lastmod>2022-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/shoka/</loc>
+    <lastmod>2022-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/twikoo/</loc>
     <lastmod>2022-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,21 +420,7 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/quic/</loc>
-    <lastmod>2022-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/tags/shoka/</loc>
-    <lastmod>2022-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/tags/twikoo/</loc>
+    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
     <lastmod>2022-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -448,14 +457,14 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
+    <loc>https://www.kaitaku.xyz/categories/webbuild/</loc>
     <lastmod>2022-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/webbuild/</loc>
+    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
     <lastmod>2022-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
