@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/privacy/index.html</loc>
+    
+    <lastmod>2022-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
     
     <lastmod>2022-08-30</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://www.kaitaku.xyz/manifest.json</loc>
     
     <lastmod>2022-08-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/privacy/index.html</loc>
-    
-    <lastmod>2022-08-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -378,6 +378,13 @@
   </url>
   
   <url>
+    <loc>https://www.kaitaku.xyz/tags/go/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -393,13 +400,6 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/windows/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/tags/go/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -450,14 +450,14 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
+    <loc>https://www.kaitaku.xyz/categories/golang/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/golang/</loc>
+    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -478,7 +478,7 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/webbuild/hexo/</loc>
+    <loc>https://www.kaitaku.xyz/categories/python/easy/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -492,7 +492,7 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/python/easy/</loc>
+    <loc>https://www.kaitaku.xyz/categories/webbuild/hexo/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
