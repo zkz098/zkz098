@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/notice/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb1/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
     <lastmod>2022-08-30</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokajsdelivr/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
@@ -19,14 +31,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/quic/</loc>
     <lastmod>2022-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb1/</loc>
-    <lastmod>2022-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/notice/</loc>
-    <lastmod>2022-08-02</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/mcipv6/</loc>
@@ -83,10 +87,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
     <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
-    <lastmod>2022-06-22</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/golang/go5/</loc>
