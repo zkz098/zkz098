@@ -1,8 +1,8 @@
+https://www.kaitaku.xyz/python/easy/pythonexe/
 https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/
 https://www.kaitaku.xyz/webbuild/hexo/hexoweb1/
 https://www.kaitaku.xyz/webbuild/shokapatch/
-https://www.kaitaku.xyz/python/easy/pythonexe/
 https://www.kaitaku.xyz/webbuild/shokajsdelivr/
 https://www.kaitaku.xyz/webbuild/nginx-quic/
 https://www.kaitaku.xyz/webbuild/quic/

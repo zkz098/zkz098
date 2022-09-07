@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
+    <lastmod>2022-09-06</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
     <lastmod>2022-09-01</lastmod>
   </url>
@@ -15,10 +19,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
     <lastmod>2022-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
-    <lastmod>2022-08-30</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokajsdelivr/</loc>
