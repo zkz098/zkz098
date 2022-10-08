@@ -29,7 +29,8 @@
 &lt;p&gt;此插件仅提供了 &lt;code&gt;indexnow&lt;/code&gt;  链接推送功能，建议搭配其他插件使用&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;此插件目前需要  &lt;code&gt;node.js16&lt;/code&gt;  以上， &lt;code&gt;1.0.2&lt;/code&gt;  会尝试解决兼容性问题&lt;/p&gt;
+&lt;p&gt;目前只有 &lt;code&gt;1.0.6+&lt;/code&gt;  和 &lt;code&gt;1.0.3&lt;/code&gt;  可以正常运行，请勿安装 &lt;code&gt;1.0.5&lt;/code&gt;  &lt;br /&gt;
+ &lt;code&gt;1.0.3+&lt;/code&gt;  均有 fetch 兼容支持&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;安装插件和获取apikey&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装插件和获取apikey&#34;&gt;#&lt;/a&gt; 安装插件和获取 apikey&lt;/h2&gt;
 &lt;p&gt;安装此插件:&lt;/p&gt;
