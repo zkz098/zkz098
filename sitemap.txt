@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/updata/index.html
 https://www.kaitaku.xyz/webbuild/hexo/indexnow/
 https://www.kaitaku.xyz/about/index.html
@@ -8,7 +9,6 @@ https://www.kaitaku.xyz/webbuild/hexo/hexoweb1/
 https://www.kaitaku.xyz/webbuild/shokapatch/
 https://www.kaitaku.xyz/privacy/index.html
 https://www.kaitaku.xyz/webbuild/shokajsdelivr/
-https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/webbuild/nginx-quic/
 https://www.kaitaku.xyz/webbuild/quic/
 https://www.kaitaku.xyz/manifest.json
