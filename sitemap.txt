@@ -1,5 +1,5 @@
-https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/updata/index.html
+https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/webbuild/hexo/indexnow/
 https://www.kaitaku.xyz/about/index.html
 https://www.kaitaku.xyz/python/easy/pythonexe/
@@ -54,7 +54,7 @@ https://www.kaitaku.xyz/categories/mc/
 https://www.kaitaku.xyz/categories/golang/
 https://www.kaitaku.xyz/categories/misc/
 https://www.kaitaku.xyz/categories/webbuild/
-https://www.kaitaku.xyz/categories/webbuild/hexo/
 https://www.kaitaku.xyz/categories/python/
 https://www.kaitaku.xyz/categories/python/easy/
 https://www.kaitaku.xyz/categories/python/app/
+https://www.kaitaku.xyz/categories/webbuild/hexo/
