@@ -1,12 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kaitaku.xyz/webbuild/hexo/indexnow/</loc>
-    <lastmod>2022-10-08</lastmod>
+    <loc>https://www.kaitaku.xyz/webbuild/nginx-quic/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/quic/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokajsdelivr/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokatwikoo/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/app/pythonrsa/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/golang/go1/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/golang/go2/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/golang/go3/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/golang/go4/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/golang/go5/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
+    <lastmod>2022-11-11</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythonexe/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone8/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/python/app/pythona1/</loc>
+    <lastmod>2022-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/hexo/indexnow/</loc>
+    <lastmod>2022-10-08</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
@@ -21,22 +113,6 @@
     <lastmod>2022-09-01</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/webbuild/shokapatch/</loc>
-    <lastmod>2022-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/shokajsdelivr/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/nginx-quic/</loc>
-    <lastmod>2022-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/quic/</loc>
-    <lastmod>2022-08-23</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/mcipv6/</loc>
     <lastmod>2022-08-02</lastmod>
   </url>
@@ -45,84 +121,8 @@
     <lastmod>2022-08-02</lastmod>
   </url>
   <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone9p/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5p/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone10/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone8/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone6/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone5/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone4/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone1/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone3/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone2/</loc>
-    <lastmod>2022-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/shokatwikoo/</loc>
-    <lastmod>2022-07-28</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/easy/pythone7/</loc>
-    <lastmod>2022-07-13</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/golang/go5/</loc>
-    <lastmod>2022-05-19</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/app/pythonrsa/</loc>
-    <lastmod>2022-04-18</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/misc/windbg/</loc>
     <lastmod>2022-04-09</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/python/app/pythona1/</loc>
-    <lastmod>2022-03-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/golang/go4/</loc>
-    <lastmod>2022-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/golang/go3/</loc>
-    <lastmod>2022-03-11</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/golang/go2/</loc>
-    <lastmod>2022-03-11</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/golang/go1/</loc>
-    <lastmod>2022-03-05</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
