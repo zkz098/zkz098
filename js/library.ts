@@ -126,6 +126,12 @@ Object.assign(HTMLElement.prototype, {
     }
     return this.getBoundingClientRect().height
   },
+  /** GPT!
+  此函数将元素的宽度设置为指定值，如果未提供值，则返回元素的宽度。<br />
+  宽度可以作为数字提供，在这种情况下，假定它以`rem`为单位，作为字符串提供。<br />
+  如果宽度以数字形式提供，则在设置元素的宽度之前，该函数会将其转换为附加`rem`单位的字符串。<br />
+  如果宽度作为字符串提供，则假定它已经采用正确的格式，并直接用于设置元素的宽度。
+   */
   width: function (w?:number|string):number {
     if (w) {
       this.style.width = typeof w === 'number' ? w + 'rem' : w
