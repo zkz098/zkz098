@@ -2,9 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/about/index.html</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokaXFAQ/</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/notice/</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokaX/</loc>
     
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/privacy/index.html</loc>
+    
+    <lastmod>2023-01-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -23,15 +68,6 @@
     <loc>https://www.kaitaku.xyz/manifest.json</loc>
     
     <lastmod>2022-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/</loc>
-    
-    <lastmod>2022-11-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -290,33 +326,6 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/about/index.html</loc>
-    
-    <lastmod>2022-09-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/notice/</loc>
-    
-    <lastmod>2022-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/privacy/index.html</loc>
-    
-    <lastmod>2022-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/python/easy/pythone9/</loc>
     
     <lastmod>2022-08-02</lastmod>
@@ -382,7 +391,7 @@
 
   <url>
     <loc>https://www.kaitaku.xyz/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -390,77 +399,77 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/MC/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/go/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/windbg/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/windows/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/quic/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/shoka/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/twikoo/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/python/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/shokaX/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -469,56 +478,63 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/mc/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/golang/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/misc/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/webbuild/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/easy/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/python/app/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.kaitaku.xyz/categories/webbuild/hexo/</loc>
-    <lastmod>2023-01-06</lastmod>
+    <lastmod>2023-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/categories/webbuild/shokaX/</loc>
+    <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
