@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/</loc>
-    <lastmod>2023-01-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/webbuild/shokaXFAQ/</loc>
-    <lastmod>2023-01-07</lastmod>
-  </url>
-  <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
-    <lastmod>2023-01-07</lastmod>
+    <lastmod>2023-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokaXplugin/</loc>
+    <lastmod>2023-01-13</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokaX/</loc>
+    <lastmod>2023-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/shokaXFAQ/</loc>
+    <lastmod>2023-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/</loc>
     <lastmod>2023-01-07</lastmod>
   </url>
   <url>
