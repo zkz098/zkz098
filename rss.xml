@@ -30,7 +30,7 @@
 在执行下列步骤前，请编译安装 &lt;code&gt;nginx 1.23&lt;/code&gt;  或更高版本&lt;/p&gt;
 &lt;h2 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h2&gt;
 &lt;p&gt;执行下列指令安装前置包:&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; g++ flex bison &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; apache2-dev doxygen libyajl-dev ssdeep liblua5.2-dev libgeoip-dev libtool dh-autoreconf libcurl4-gnutls-dev libxml2 libpcre++-dev libxml2-dev &lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; liblmdb-dev libpkgconf3 lmdb-doc pkgconf zlib1g-dev libssl-dev libfuzzy-dev &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;编译ssdeep&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编译ssdeep&#34;&gt;#&lt;/a&gt; 编译 ssdeep&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; g++ flex bison &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; apache2-dev doxygen libyajl-dev ssdeep liblua5.2-dev libgeoip-dev libtool dh-autoreconf libcurl4-gnutls-dev libxml2 libpcre++-dev libxml2-dev &lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; liblmdb-dev libpkgconf3 lmdb-doc pkgconf zlib1g-dev libssl-dev libfuzzy-dev &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;编译ssdeep&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编译ssdeep&#34;&gt;#&lt;/a&gt; 编译 ssdeep&lt;/h2&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;此步是因为博主在编译 ModSecurity 时无法识别 apt 安装的 ssdeep，可以先跳过此步，后续配置时出现问题再执行&lt;/p&gt;
 &lt;/div&gt;
@@ -56,6 +56,11 @@
 &lt;p&gt;打开如下地址:&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;url&amp;gt;&amp;#x2F;?param&amp;#x3D;*&amp;gt;&amp;lt;script&amp;gt;alert(1)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;请将 &lt;code&gt;&amp;lt;url&amp;gt;&lt;/code&gt;  替换为你的测试地址 (不需要带括号)&lt;br /&gt;
  如果出现 &lt;code&gt;403&lt;/code&gt;  则安装成功&lt;/p&gt;
+&lt;h2 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9raWZhcnVuaXguY29tL2luc3RhbGwtbW9kc2VjdXJpdHktMy13aXRoLW5naW54LW9uLXVidW50dS8=&#34;&gt;Install ModSecurity 3 with Nginx on Ubuntu 22.04&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4NjI2MDQzL2FydGljbGUvZGV0YWlscy8xMDUwMjc0MDQ=&#34;&gt;WAF 简介及 ModSecurity-nginx 搭建&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
  ]]></description>
         </item>
         <item>
