@@ -148,6 +148,11 @@
 &lt;td style=&#34;text-align:left&#34;&gt;文件尾部&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;在 &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt;  标签前注入模板&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;status&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;页脚状态&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;在备案号及版权说明之前&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;样式点位:&lt;/p&gt;
