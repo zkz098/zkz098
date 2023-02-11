@@ -246,7 +246,7 @@
 &lt;p&gt;一个 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==&#34;&gt;shoka 主题&lt;/span&gt; 的二次开发版，截止文章发布时尚无正式版 (github 中的开发版可供测试使用) &lt;br /&gt;
 shokaX 的目标是建设一个更易使用和开发的主题，截止此文章写就时支持如下功能:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;支持 twikoo 和 waline 评论系统&lt;/li&gt;
+&lt;li&gt;支持 twikoo、gitalk、giscus 和 waline 评论系统&lt;/li&gt;
 &lt;li&gt;原生 PWA 支持&lt;/li&gt;
 &lt;li&gt;注入 js 和 css 支持&lt;/li&gt;
 &lt;li&gt;自定义 font&lt;/li&gt;
@@ -259,7 +259,7 @@ shokaX 的目标是建设一个更易使用和开发的主题，截止此文章�
 &lt;p&gt;shokaX 仍在开发中，发现 BUG 或有建议 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3prejA5OC9oZXhvLXRoZW1lLXNob2thWA==&#34;&gt;点我&lt;/span&gt; 跳转到 github 仓库&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;本主题和 shoka 一样采用 MIT 协议开源，欢迎 fork 和提交 PR &lt;br /&gt;
+&lt;p&gt;本主题采用 BSD 协议开源，欢迎 fork 和提交 PR &lt;br /&gt;
 npm 上的主题包名为 &lt;code&gt;hexo-theme-shokax&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;如何安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何安装&#34;&gt;#&lt;/a&gt; 如何安装？&lt;/h1&gt;
