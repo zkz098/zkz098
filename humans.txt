@@ -8,6 +8,6 @@ Yume Shoka: shoka.lostyu.me
 Lavender's Blog: www.lavenderdh.cn
 
 /* SITE */
-最后更新: 2022/8/14
+最后更新: 2022/12/17
 标准: HTML5,CSS3,javascript
-组件: Hexo,Hexo-Theme-shoka
+组件: Hexo,Hexo-Theme-shokaX
