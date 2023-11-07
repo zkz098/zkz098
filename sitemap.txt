@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/webbuild/nginx-quic2/
 https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/updata/index.html
 https://www.kaitaku.xyz/webbuild/nginx-quic/
