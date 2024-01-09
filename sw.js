@@ -1,1 +1,198 @@
-const CACHE_NAME="KaitakuCDNCache";let cachelist=[],flag=!1;const cdn={gh:{jsdelivr:{url:"https://cdn.jsdelivr.net/gh"},jsdelivr_fastly:{url:"https://fastly.jsdelivr.net/gh"},jsdelivr_kaitaku:{url:"https://jsd.kaitaku.xyz/gh"}},cdnjs:{staticfile:{url:"https://cdn.staticfile.org"},cdnjs_cf:{url:"https://cdnjs.cloudflare.com/ajax/libs"},baomitu:{url:"https://lib.baomitu.com"},bytedance:{url:"https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M"}},npm:{sourcegcdn:{url:"https://npm.sourcegcdn.com"},unpkg:{url:"https://unpkg.com"},tianli:{url:"https://cdn1.tianli0.top/npm"}}},info=e=>{console.log(`%c INFO %c ${e}`,"color: white; background: #32cd32; padding: 5px 3px;","padding: 4px;border:1px solid #32cd32")},warn=e=>{console.log(`%c WARN %c ${e}`,"color: white; background: #ffd700; padding: 5px 3px;","padding: 4px;border:1px solid #ffd700")},err=e=>{console.log(`%c ERROR %c ${e}`,"color: white; background: #ff0000; padding: 5px 3px;","padding: 4px;border:1px solid #ff0000")},handleerr=async(e,t)=>new Response(`<h1>KaitakuCDNCache遇到了致命错误</h1>\n    <b>${t}</b>`,{headers:{"content-type":"text/html; charset=utf-8"}}),file_found=(e,t)=>e.indexOf(t)>-1,handle=async e=>{const t=e.url,n=e.url.split("/")[2];let c=[];if(file_found(t,"woff")||file_found(t,"cover.jpg")||file_found(t,"ico"))return caches.match(e).then((function(n){return n||fetch(t).then((function(t){return caches.open(CACHE_NAME).then((function(n){return n.put(e,t.clone()),t}))}))}));if(n.match("www.kaitaku.xyz"))return fetch(e.url).then((function(t){if(!t)throw"error";return caches.open(CACHE_NAME).then((function(n){return n.delete(e),n.put(e,t.clone()),t}))})).catch((function(t){return caches.match(e).then((function(e){return e||caches.match(new Request("/offline.html"))}))}));if(n.match("fundingchoicesmessages.google.com"))return info("fetch fundingchoicesmessages succeed"),fetch(e.url.replace("https://fundingchoicesmessages.google.com","https://adsenseabc.vercel.app"));if(file_found(t,"www.google.com/recaptcha/"))return info("fetch recaptcha succeed"),fetch(e.url.replace("https://www.google.com","https://www.recaptcha.net"));for(let r in cdn)for(let a in cdn[r])if(n===cdn[r][a].url.split("https://")[1].split("/")[0]&&t.match(cdn[r][a].url)){info(`capture ${t}`),c=[];for(let e in cdn[r])c.push(t.replace(cdn[r][a].url,cdn[r][e].url));return t.indexOf("@latest/")>-1?lfetch(c,t):caches.match(e).then((function(n){return n||lfetch(c,t).then((function(t){return caches.open(CACHE_NAME).then((function(n){return n.put(e,t.clone()),t}))}))}))}return fetch(e)},lfetch=async(e,t)=>{info(`lfetch handle! | mirrors: ${e.length}`);let n=new AbortController;const c=async e=>new Response(await e.arrayBuffer(),{status:e.status,headers:e.headers});return Promise.any||(Promise.any=function(e){return new Promise(((t,n)=>{let c=(e=Array.isArray(e)?e:[]).length,r=[];if(0===c)return n(new AggregateError("All promises were rejected"));e.forEach((e=>{e.then((e=>{t(e)}),(e=>{c--,r.push(e),0===c&&n(new AggregateError(r))}))}))}))}),Promise.any(e.map((e=>new Promise(((t,r)=>{fetch(e,{signal:n.signal}).then(c).then((async e=>{200===e.status?(n.abort(),t(e)):r(e)})).catch((async e=>{var t;flag||(t="fetch: "+e,console.log(`%c WARN %c ${t}`,"color: white; background: #ffd700; padding: 5px 3px;","padding: 4px;border:1px solid #ffd700"),flag=!0)}))})))))};self.addEventListener("install",(async e=>{self.skipWaiting(),e.waitUntil(caches.open(CACHE_NAME).then((e=>(info(`${CACHE_NAME} Opened`),info(`${CACHE_NAME} start running`),e.addAll(cachelist)))))})),self.addEventListener("activate",(async function(e){self.clients.claim()})),self.addEventListener("fetch",(async e=>{if(-1===e.request.url.indexOf("cravatar")&&-1===e.request.url.indexOf("qweather"))try{e.respondWith(handle(e.request))}catch(t){e.respondWith(handleerr(e.request,t))}}));
+/*
+* service worker版本: 1.1.2 (2022-8-17)
+*/
+const CACHE_NAME = "KaitakuCDNCache";
+let cachelist = [];
+let flag=false;
+const cdn = {
+    "gh": {
+        jsdelivr: {
+            "url": "https://cdn.jsdelivr.net/gh"
+        },
+        jsdelivr_fastly: {
+            "url": "https://fastly.jsdelivr.net/gh"
+        },
+        jsdelivr_kaitaku:{
+            "url": "https://jsd.kaitaku.xyz/gh"
+        }
+    },
+    "cdnjs": {
+        staticfile: {
+            "url": "https://cdn.staticfile.org"
+        },
+        cdnjs_cf: {
+            "url": "https://cdnjs.cloudflare.com/ajax/libs"
+        },
+        baomitu: {
+            "url": "https://lib.baomitu.com"
+        },
+        bytedance: {
+            "url": "https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M"
+        }
+    },
+    "npm": {
+        sourcegcdn: {
+            "url": "https://npm.sourcegcdn.com"
+        },
+        unpkg: {
+            "url": "https://unpkg.com"
+        },
+        tianli: {
+            "url": "https://cdn1.tianli0.top/npm"
+        }
+    }
+}
+
+const info = (mes) => {
+    console.log(`%c INFO %c ${mes}`, "color: white; background: #32cd32; padding: 5px 3px;", "padding: 4px;border:1px solid #32cd32")
+}
+const warn = (mes) => {
+    console.log(`%c WARN %c ${mes}`, "color: white; background: #ffd700; padding: 5px 3px;", "padding: 4px;border:1px solid #ffd700")
+}
+const err = (mes) => {
+    console.log(`%c ERROR %c ${mes}`, "color: white; background: #ff0000; padding: 5px 3px;", "padding: 4px;border:1px solid #ff0000")
+}
+const handleerr = async (req, msg) => {
+    return new Response(`<h1>KaitakuCDNCache遇到了致命错误</h1>
+    <b>${msg}</b>`, {headers: {"content-type": "text/html; charset=utf-8"}})
+}
+const file_found = (urlString,token)=>{
+    return urlString.indexOf(token) > -1;
+}
+
+const handle = async (req) => {
+    const urlStr = req.url
+    const domain = req.url.split('/')[2];
+    let urls = []
+    if (file_found(urlStr,"woff")||file_found(urlStr,"ico")){
+        return caches.match(req).then(function (resp) {
+            return resp || fetch(urlStr).then(function (res) {
+                return caches.open(CACHE_NAME).then(function (cache) {
+                    cache.put(req, res.clone());
+                    return res;
+                });
+            });
+        })
+    } else if (domain.match("www.kaitaku.xyz")) {
+        if (file_found(urlStr,".jpg")){
+            req.url.replace(".jpg",".webp")
+        } else if (file_found(urlStr,".png")){
+            req.url.replace(".png",".webp")
+        }
+        return fetch(req.url).then(function (res) {
+            if (!res) { throw 'error' }
+            return caches.open(CACHE_NAME).then(function (cache) {
+                cache.delete(req);
+                cache.put(req, res.clone());
+                return res;
+            });
+        }).catch(function (err) {
+            return caches.match(req).then(function (resp) {
+                return resp || caches.match(new Request('/offline.html')) //
+            })
+        })
+    } else {
+        for (let i in cdn) {
+            for (let j in cdn[i]) {
+                if (domain === cdn[i][j].url.split('https://')[1].split('/')[0] && urlStr.match(cdn[i][j].url)) {
+                    info(`capture ${urlStr}`)
+                    urls = []
+                    for (let k in cdn[i]) {
+                        urls.push(urlStr.replace(cdn[i][j].url, cdn[i][k].url))
+                    }
+                    if (urlStr.indexOf('@latest/') > -1) {
+                        return lfetch(urls, urlStr)
+                    } else {
+                        return caches.match(req).then(function (resp) {
+                            return resp || lfetch(urls, urlStr).then(function (res) {
+                                return caches.open(CACHE_NAME).then(function (cache) {
+                                    cache.put(req, res.clone());
+                                    return res;
+                                });
+                            });
+                        })
+                    }
+                }
+            }
+        }
+        return fetch(req)
+    }
+}
+
+const lfetch = async (urls, url) => {
+    info(`lfetch handle! | mirrors: ${urls.length}`)
+    let controller = new AbortController();
+    const PauseProgress = async (res) => {
+        return new Response(await (res).arrayBuffer(), {status: res.status, headers: res.headers});
+    };
+    if (!Promise.any) {
+        Promise.any = function (promises) {
+            return new Promise((resolve, reject) => {
+                promises = Array.isArray(promises) ? promises : []
+                let len = promises.length
+                let errs = []
+                if (len === 0) return reject(new AggregateError('All promises were rejected'))
+                promises.forEach((promise) => {
+                    promise.then(value => {
+                        resolve(value)
+                    }, err => {
+                        len--
+                        errs.push(err)
+                        if (len === 0) {
+                            reject(new AggregateError(errs))
+                        }
+                    })
+                })
+            })
+        }
+    }
+    return Promise.any(urls.map(urls => {
+        return new Promise((resolve, reject) => {
+            fetch(urls, {
+                signal: controller.signal
+            })
+                .then(PauseProgress)
+                .then(async res => {
+                        if (res.status === 200) {
+                            controller.abort();
+                            resolve(res)
+                        } else {
+                            reject(res)
+                        }
+                    }
+                ).catch(async (reason) => {
+                if (!flag) {
+                    warn("fetch: " + reason)
+                    flag = true;
+                }
+            })
+        })
+    }))
+}
+self.addEventListener('install', async (event) => {
+    self.skipWaiting();
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+            info(`${CACHE_NAME} Opened`);
+            info(`${CACHE_NAME} start running`)
+            return cache.addAll(cachelist);
+        })
+    );
+})
+
+self.addEventListener('activate', async function (installEvent) {
+    self.clients.claim();
+})
+
+self.addEventListener('fetch', async (event) => {
+    if (event.request.url.indexOf("cravatar")!==-1||event.request.url.indexOf("qweather")!==-1) {
+        return;
+    }
+    try {
+        event.respondWith(handle(event.request))
+    } catch (msg) {
+        event.respondWith(handleerr(event.request, msg))
+    }
+});
+
+
