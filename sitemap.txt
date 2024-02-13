@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/webbuild/hexo/hexoesm/
 https://www.kaitaku.xyz/friends/index.html
 https://www.kaitaku.xyz/python/bert-vits2/
 https://www.kaitaku.xyz/webbuild/nginx-quic2/
@@ -59,6 +60,8 @@ https://www.kaitaku.xyz/tags/shokaX/
 https://www.kaitaku.xyz/tags/shoka/
 https://www.kaitaku.xyz/tags/twikoo/
 https://www.kaitaku.xyz/tags/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/
+https://www.kaitaku.xyz/tags/%E7%8E%B0%E4%BB%A3%E5%8C%96%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/
+https://www.kaitaku.xyz/tags/hexo/
 https://www.kaitaku.xyz/categories/mc/
 https://www.kaitaku.xyz/categories/misc/
 https://www.kaitaku.xyz/categories/golang/
