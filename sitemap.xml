@@ -457,6 +457,13 @@
   </url>
   
   <url>
+    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kaitaku.xyz/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -471,20 +478,6 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/</loc>
-    <lastmod>2024-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kaitaku.xyz/tags/nginx/</loc>
-    <lastmod>2024-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.kaitaku.xyz/tags/windbg/</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -493,6 +486,13 @@
   
   <url>
     <loc>https://www.kaitaku.xyz/tags/windows/</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kaitaku.xyz/tags/nginx/</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -564,14 +564,14 @@
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/python/</loc>
+    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.kaitaku.xyz/categories/misc/</loc>
+    <loc>https://www.kaitaku.xyz/categories/python/</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
