@@ -20,6 +20,8 @@
             <guid isPermalink="true">https://www.kaitaku.xyz/webbuild/hexo/hexoesm/</guid>
             <title>论 ESM 和 esbuild 在 hexo 主题中的应用</title>
             <link>https://www.kaitaku.xyz/webbuild/hexo/hexoesm/</link>
+            <category term="网站建设" scheme="https://www.kaitaku.xyz/categories/webbuild/" />
+            <category term="hexo" scheme="https://www.kaitaku.xyz/categories/webbuild/hexo/" />
             <category term="shokaX" scheme="https://www.kaitaku.xyz/tags/shokaX/" />
             <category term="现代化前端技术" scheme="https://www.kaitaku.xyz/tags/%E7%8E%B0%E4%BB%A3%E5%8C%96%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" />
             <category term="hexo" scheme="https://www.kaitaku.xyz/tags/hexo/" />
