@@ -48,13 +48,13 @@ https://www.kaitaku.xyz/404.html
 https://www.kaitaku.xyz/misc/antivirus/
 https://www.kaitaku.xyz/
 https://www.kaitaku.xyz/tags/MC/
-https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/
 https://www.kaitaku.xyz/tags/go/
-https://www.kaitaku.xyz/tags/windbg/
-https://www.kaitaku.xyz/tags/windows/
 https://www.kaitaku.xyz/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
 https://www.kaitaku.xyz/tags/python/
+https://www.kaitaku.xyz/tags/%E5%AE%89%E8%BD%AF/
 https://www.kaitaku.xyz/tags/nginx/
+https://www.kaitaku.xyz/tags/windbg/
+https://www.kaitaku.xyz/tags/windows/
 https://www.kaitaku.xyz/tags/quic/
 https://www.kaitaku.xyz/tags/shokaX/
 https://www.kaitaku.xyz/tags/shoka/
@@ -63,9 +63,9 @@ https://www.kaitaku.xyz/tags/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/
 https://www.kaitaku.xyz/tags/%E7%8E%B0%E4%BB%A3%E5%8C%96%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/
 https://www.kaitaku.xyz/tags/hexo/
 https://www.kaitaku.xyz/categories/mc/
-https://www.kaitaku.xyz/categories/misc/
 https://www.kaitaku.xyz/categories/golang/
 https://www.kaitaku.xyz/categories/python/
+https://www.kaitaku.xyz/categories/misc/
 https://www.kaitaku.xyz/categories/webbuild/
 https://www.kaitaku.xyz/categories/python/app/
 https://www.kaitaku.xyz/categories/python/easy/
