@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/notice/</loc>
+    <lastmod>2024-02-25</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/webbuild/hexo/hexoesm/</loc>
     <lastmod>2024-02-14</lastmod>
   </url>
@@ -27,10 +31,6 @@
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/nginx-modsec/</loc>
     <lastmod>2023-01-20</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/notice/</loc>
-    <lastmod>2023-01-13</lastmod>
   </url>
   <url>
     <loc>https://www.kaitaku.xyz/webbuild/shokaXFAQ/</loc>

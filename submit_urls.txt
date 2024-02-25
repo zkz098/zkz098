@@ -1,3 +1,4 @@
+https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/webbuild/hexo/hexoesm/
 https://www.kaitaku.xyz/python/bert-vits2/
 https://www.kaitaku.xyz/webbuild/nginx-quic2/
@@ -5,6 +6,5 @@ https://www.kaitaku.xyz/webbuild/nginx-quic/
 https://www.kaitaku.xyz/webbuild/shokaX/
 https://www.kaitaku.xyz/webbuild/shokaXplugin/
 https://www.kaitaku.xyz/webbuild/nginx-modsec/
-https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/webbuild/shokaXFAQ/
 https://www.kaitaku.xyz/webbuild/hexo/hexoweb2/

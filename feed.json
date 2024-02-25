@@ -178,7 +178,7 @@
             "url": "https://www.kaitaku.xyz/notice/",
             "title": "公告",
             "date_published": "2022-05-14T00:35:17.000Z",
-            "content_html": "<h1 id=\"本站公告\"><a class=\"anchor\" href=\"#本站公告\">#</a> 本站公告</h1>\n<h2 id=\"公告区\"><a class=\"anchor\" href=\"#公告区\">#</a> 公告区</h2>\n<p>本站已正式更换为 shokaX 主题</p>\n<h3 id=\"维护计划\"><a class=\"anchor\" href=\"#维护计划\">#</a> 维护计划</h3>\n<ul>\n<li>在 2 月可能会有一次较长时间的停机更新</li>\n</ul>\n<hr />\n<h2 id=\"更新计划\"><a class=\"anchor\" href=\"#更新计划\">#</a> 更新计划</h2>\n<ul class=\"task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_0\" disabled=\"true\" /><label for=\"cbx_0\"> 浓缩 python 基础篇</label></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_1\" checked=\"true\" disabled=\"true\" /><label for=\"cbx_1\"> 再逝逝 QUIC-nginx</label></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_2\" checked=\"true\" disabled=\"true\" /><label for=\"cbx_2\"> 给 twikoo 加亿点表情</label></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_3\" disabled=\"true\" /><label for=\"cbx_3\"> 写个更友好的 404 界面</label></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_4\" disabled=\"true\" /><label for=\"cbx_4\"> 加入亿点点毛玻璃特效 <span class=\"spoiler\" title=\"你知道得太多了\">¿</span></label></li>\n</ul>\n",
+            "content_html": "<h1 id=\"本站公告\"><a class=\"anchor\" href=\"#本站公告\">#</a> 本站公告</h1>\n<p>自 2024 年 2 月 25 日起本站进入停更状态，预计于 2024 年 6 月下旬结束</p>\n<p>希望各位站长不要删除本站友链</p>\n<p>此期间内的一切通讯方式都不太可能得到回复，包括邮件在内</p>\n",
             "tags": []
         },
         {
