@@ -1,5 +1,5 @@
-https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/friends/index.html
+https://www.kaitaku.xyz/notice/
 https://www.kaitaku.xyz/webbuild/hexo/hexoesm/
 https://www.kaitaku.xyz/python/bert-vits2/
 https://www.kaitaku.xyz/webbuild/nginx-quic2/
