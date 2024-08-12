@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kaitaku.xyz/misc/ax3000t-openwrt/</loc>
+    <lastmod>2024-08-12</lastmod>
+  </url>
+  <url>
     <loc>https://www.kaitaku.xyz/notice/</loc>
     <lastmod>2024-06-24</lastmod>
   </url>
@@ -151,9 +155,5 @@
   <url>
     <loc>https://www.kaitaku.xyz/misc/windbg/</loc>
     <lastmod>2022-04-09</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kaitaku.xyz/misc/antivirus/</loc>
-    <lastmod>2022-02-22</lastmod>
   </url>
 </urlset> 
