@@ -8,11 +8,174 @@
     <author>
       <name>zkz098</name>
     </author>
-    <updated>2024-08-10T14:45:29.000Z</updated>
+    <updated>2025-02-03T12:03:12.000Z</updated>
     <category term="python" />
     <category term="go" />
     <category term="mc" />
     <category term="windbg" />
+    <entry>
+        <id>https://www.kaitaku.xyz/deepseek-and-ddos/</id>
+        <title>从 deepseek 被攻击事件谈谈 DDoS</title>
+        <link rel="alternate" href="https://www.kaitaku.xyz/deepseek-and-ddos/"/>
+        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+&lt;p&gt;其实就是我需要更新了，又正好有这么一个热点事件，所以写了本文&lt;/p&gt;
+&lt;h1 id=&#34;什么是-ddos&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是-ddos&#34;&gt;#&lt;/a&gt; 什么是 DDoS&lt;/h1&gt;
+&lt;h2 id=&#34;谈谈现代网站服务模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谈谈现代网站服务模型&#34;&gt;#&lt;/a&gt; 谈谈现代网站服务模型&lt;/h2&gt;
+&lt;p&gt;首先，我们得知道一个一个现代网站的最简服务模型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;N 个用户&lt;/li&gt;
+&lt;li&gt;N 个反向代理服务器&lt;/li&gt;
+&lt;li&gt;N 个 DNS 服务器&lt;/li&gt;
+&lt;li&gt;N 个应用服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们把他们比喻为一个餐厅，那就是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;N 个客人，负责消费&lt;/li&gt;
+&lt;li&gt;N 个服务员，负责点菜、倒水和端菜&lt;/li&gt;
+&lt;li&gt;N 个导航软件，负责指引客人餐厅位置&lt;/li&gt;
+&lt;li&gt;N 个厨师，负责制作菜品&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下图：&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;./struct-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;都有哪些ddos类攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#都有哪些ddos类攻击&#34;&gt;#&lt;/a&gt; 都有哪些 DDoS 类攻击&lt;/h2&gt;
+&lt;p&gt;现在我们要探讨另一个问题 —— 如何以最低的成本让这个餐厅无法做生意，很显然的，有几种思路：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;让这个餐厅没客人（攻击方法很多且超出本人领域，这里不做说明）&lt;/li&gt;
+&lt;li&gt;让服务员无法正常工作（DDoS/DoS 攻击 / 慢速 CC 攻击等）&lt;/li&gt;
+&lt;li&gt;让导航软件无法正常工作（DNS 攻击 / DNS 污染）&lt;/li&gt;
+&lt;li&gt;让厨师无法正常工作（CC 攻击 / 漏洞攻击 / SQL 注入等）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;ddos-攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ddos-攻击&#34;&gt;#&lt;/a&gt; DDoS 攻击&lt;/h3&gt;
+&lt;p&gt;DDoS 的原理就是让 “服务员” 疲于响应，例如雇佣 100 个流浪汉进入餐厅，进来之后只翻菜单并在 5 分钟后叫服务员要一杯水，然后离开，然后再进去，这个方法在于：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;成本极低。雇佣 “流浪汉” 的成本相当低廉&lt;/li&gt;
+&lt;li&gt;解决难度高。因为服务员无法确定这个人究竟是不是要点菜，只能进行响应&lt;/li&gt;
+&lt;li&gt;难以拦截。你需要把全部流浪汉都标记一遍才能完全拦截，而且对方可以雇佣新的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这就是 DDoS 攻击，通过大量肉鸡或僵尸网络（即流浪汉）来对目标网站发出无效数据包，经 DNS 解析（即前台）指引后由反向代理服务器（即服务员）进行回应，通过无止境的无效数据包来让反向代理服务器疲于回应并瘫痪，我们也不难发现 DDoS 攻击的几个特征：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;攻击并不是真正的请求，只是无效数据包。“点菜” 这一操作从未被进行，服务员只是在回应 “要一杯水” 这个无效数据包&lt;/li&gt;
+&lt;li&gt;应用服务器不会被攻击。没点菜自然没有厨师什么事（仅针对传统 DDoS 攻击，现代应用层 DDoS（如 HTTP Flood）可能直接冲击应用服务器）&lt;/li&gt;
+&lt;li&gt;DNS 服务器在这里不是重点攻击对象。虽然 DNS 服务器本身也可能成为攻击目标，但在这里我们暂且按下不表&lt;/li&gt;
+&lt;li&gt;攻击发起者数量庞大。“雇佣” 成本低廉&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这就是 DDoS 攻击&lt;/p&gt;
+&lt;h3 id=&#34;ddos-放大攻击反射攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ddos-放大攻击反射攻击&#34;&gt;#&lt;/a&gt; DDoS 放大攻击（反射攻击）&lt;/h3&gt;
+&lt;p&gt;DDoS 反射攻击通过诱使第三方服务器响应请求来掩盖攻击源，其中若响应数据大于查询数据（如 DNS/NTP 协议），则称为放大攻击，能实现流量倍增效果。&lt;/p&gt;
+&lt;p&gt;DDoS 放大攻击就是利用公网其他服务器的漏洞来实现 “四两拨千斤” 的效果，例如伪装为餐厅老板，发布一些不实的优惠信息，这样就会有大量的人进入餐厅，而你连 “雇佣” 他们都不需要。&lt;/p&gt;
+&lt;p&gt;这样的优势也很显然：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;成本更加低廉&lt;/li&gt;
+&lt;li&gt;源头难以查找&lt;/li&gt;
+&lt;li&gt;更难以屏蔽&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;例如 Memcached 反射攻击可将 1GB 请求流量放大为最高 5 万倍的攻击流量，而 NTP 反射攻击也能达到约 556 倍的放大效果。&lt;/p&gt;
+&lt;h3 id=&#34;cc攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cc攻击&#34;&gt;#&lt;/a&gt; CC 攻击&lt;/h3&gt;
+&lt;p&gt;CC 攻击侧重点有一点区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;慢速攻击通过极慢速发送 HTTP 请求头（例如每 10 秒发送一个字节），保持大量连接长时间占用服务器资源，使其无法处理正常请求。&lt;/li&gt;
+&lt;li&gt;普通 CC 攻击是通过制造难以处理的请求来让应用服务器无法回复正常用户的请求，从而让正常客户无法得到预期请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;换而言之：&lt;br /&gt;
+DDoS 的目的是让你无法进入 “餐厅”，而 CC 攻击是让你在 “餐厅” 里也没有 “菜”&lt;/p&gt;
+&lt;p&gt;CC 攻击的危险在于：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;攻击者就是正常客户。在一个请求真正地达到消耗资源目的前极难识别&lt;/li&gt;
+&lt;li&gt;并非急性进行。CC 攻击很多时候的目的并不是 “打垮” 而是 “打残”，让网站长期高负荷而非短期瘫痪&lt;/li&gt;
+&lt;li&gt;成本更低。对于 LLM 类应用而言，如果缺少对回复长度的适当限制，很容易就能构造 CC 攻击请求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;如何防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何防御&#34;&gt;#&lt;/a&gt; 如何防御&lt;/h2&gt;
+&lt;h3 id=&#34;ddos类攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ddos类攻击&#34;&gt;#&lt;/a&gt; DDoS 类攻击&lt;/h3&gt;
+&lt;p&gt;答案是没有什么防御方法，现有 DDoS 类攻击防御方法基本都是硬抗 —— 利用网络资源尽可能多地消化掉 DDoS 攻击流量，但是消化的方法有很多。&lt;/p&gt;
+&lt;p&gt;我们大致将其分为三类，清洗、消化和缓解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;清洗的目的是让恶意流量到不了服务器&lt;/li&gt;
+&lt;li&gt;消化的目的是让恶意流量打不死服务器&lt;/li&gt;
+&lt;li&gt;缓解的目的是让恶意流量达不到攻击目的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;清洗&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#清洗&#34;&gt;#&lt;/a&gt; 清洗&lt;/h4&gt;
+&lt;p&gt;通过技术手段在攻击流量抵达目标服务器前进行识别和拦截：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;流量特征识别：基于 IP 信誉库、协议异常检测（如畸形包过滤）、行为模式分析（突发流量阈值）过滤恶意流量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分布式清洗节点：利用 CDN 或 Anycast 网络将流量分散至全球节点，就近清洗后再回源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BGP 引流：通过边界网关协议将流量导向第三方清洗中心（如运营商提供的 DDoS 防护服务）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;黑名单 / IP 限速：实时封禁高频攻击源 IP，或对特定 IP 段进行请求速率限制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;绝大多数 SaSS DDoS 防御服务采取的方式，例如 Cloudflare 和 AWS Shield。核心在于在服务器之外把 DDoS 消化掉，并识别出合法流量转发给服务器。&lt;/p&gt;
+&lt;h4 id=&#34;消化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#消化&#34;&gt;#&lt;/a&gt; 消化&lt;/h4&gt;
+&lt;p&gt;提升系统承载能力，确保关键服务在攻击中存活：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;带宽冗余：预留超出日常流量数倍的带宽资源以吸收攻击流量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;弹性云架构：通过云服务自动扩展计算资源（如 AWS Auto Scaling），动态应对流量峰值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;协议栈优化：调整 TCP/IP 协议参数（如 SYN Cookie）、使用 QUIC 协议降低连接开销。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;洪水来了拓宽河道，成本最高，最简单直接，最有效。但是成本多数情况下是远高于损失本身的，所以这个方法用的并不多&lt;/p&gt;
+&lt;h4 id=&#34;缓解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓解&#34;&gt;#&lt;/a&gt; 缓解&lt;/h4&gt;
+&lt;p&gt;削弱攻击对业务的影响，迫使攻击者放弃：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;人机验证机制：对异常流量触发验证码或 JavaScript 质询，过滤自动化攻击。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态资源调度：遭遇攻击时自动降级非核心功能，释放资源保障主服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚假响应诱导：向攻击源返回伪造的服务响应数据，消耗攻击者资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其实这个步骤很多人都做过：在 nginx 中拉黑某 ip 时返回 500/502/503 而不是 403 来迷惑攻击者，这就可以说是典型的 “缓解” 方式&lt;/p&gt;
+&lt;h2 id=&#34;防御服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御服务&#34;&gt;#&lt;/a&gt; 防御服务&lt;/h2&gt;
+&lt;p&gt;那么，有没有防御 DDoS 的服务呢。当然是有的，在这里介绍一下亚马逊的 EC2 服务，自带 AWS Shield Standard 缓解 DDoS，现在注册&lt;a href=&#34;https://aws.amazon.com/cn/free/?trk=058b7d13-d9a8-454a-9afe-9c5938e30f99&amp;amp;sc_channel=sm&#34;&gt;亚马逊云科技&lt;/a&gt;账户可以享受&lt;a href=&#34;https://aws.amazon.com/cn/free/?trk=058b7d13-d9a8-454a-9afe-9c5938e30f99&amp;amp;sc_channel=sm&#34;&gt; 12 个月免费套餐&lt;/a&gt;，其中包括 Amazon EC2 云服务器、S3 云储存、Cloudfront CDN 等多种热门产品。&lt;br /&gt;
+为节省时间，此处省略注册账号的过程，仅保留新建实例的过程:&lt;br /&gt;
+ 首先在控制台点击启动实例:&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;./controller.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 随后输入相关内容，实例选择 &lt;code&gt;t2.micro&lt;/code&gt; ，系统选择 &lt;code&gt;ubuntu 24.04LTS&lt;/code&gt; ，随后创建密钥对：&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;./keys.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+根据需求选择，一般建议使用 pem 格式，提前选择放行 HTTPS 端口，节省时间:&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;./firewall.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 一切完成之后，启动实例，等待创建完成后使用 SSH 连接到终端即可。&lt;br /&gt;
+另外建议开启 IPV6，操作如下：&lt;br /&gt;
+进入此 EC2 对应的 VPC，选择 &lt;code&gt;编辑CIDR&lt;/code&gt; ，随后添加新的 IPV6 CIDR 块，选择 &lt;code&gt;Amazon 提供的 IPv6 CIDR 块&lt;/code&gt; ，随后返回。&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;./ipv6.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+进入此 EC2 对应的子网，右键 &lt;code&gt;编辑 IPV6 CIDR&lt;/code&gt; ，添加即可。&lt;br /&gt;
+然后进入路由表，为 &lt;code&gt;::/0&lt;/code&gt;  添加一条和 &lt;code&gt;0.0.0.0/0&lt;/code&gt;  一致的路由。&lt;br /&gt;
+随后进入 &lt;code&gt;EC2 设置&lt;/code&gt; ，联网 -&amp;gt; 管理 IP 设置，分配新的 IPV6 地址。&lt;br /&gt;
+现在，这台 EC2 实例已经支持 IPV6 了。&lt;/p&gt;
+&lt;p&gt;对于使用其他服务器的情况，也可以用 cloudfront 来提高网站访问速度并享受到 AWS Shield Standard 服务:&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;./cloudfront-basic.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Origin domain 即为回源地址，建议在源服务器上配置 HTTPS 来保证回源安全性&lt;/li&gt;
+&lt;li&gt;Origin path 即为回源路径，假如网站不在 &lt;code&gt;/&lt;/code&gt;  下需配置本项&lt;/li&gt;
+&lt;li&gt;Origin Shield 类似于 L1-L2 分层缓存，可以降低源服务器请求数和负荷，配置时建议将地区配置的离服务器尽可能近&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下方配置按照自己网站实际即可，建议配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动压缩对象选 Yes&lt;/li&gt;
+&lt;li&gt;查看器协议策略选 Redirect HTTP to HTTPS&lt;/li&gt;
+&lt;li&gt;支持的 HTTP 版本选 HTTP/2 和 HTTP/3&lt;/li&gt;
+&lt;li&gt;IPv6 选 Yes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;随后，你的网站就接入了 cloudfront，获得了 cloudfront 的加速和保护&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazonaws.cn/&#34;&gt;AWS 中国官网&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="deepseek" scheme="https://www.kaitaku.xyz/tags/deepseek/" />
+        <category term="ddos" scheme="https://www.kaitaku.xyz/tags/ddos/" />
+        <updated>2025-02-03T12:03:12.000Z</updated>
+    </entry>
     <entry>
         <id>https://www.kaitaku.xyz/misc/ax3000t-openwrt/</id>
         <title>小米AX3000T openwrt刷机——从入坑到刷回原厂</title>
@@ -1332,36 +1495,5 @@ RSA (非对称加密) 算法适用于在不安全环境下加密少量数据&lt;
         <category term="windbg" scheme="https://www.kaitaku.xyz/tags/windbg/" />
         <category term="windows" scheme="https://www.kaitaku.xyz/tags/windows/" />
         <updated>2022-04-09T10:18:49.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://www.kaitaku.xyz/golang/go5/</id>
-        <title>go语言-函数与作用域</title>
-        <link rel="alternate" href="https://www.kaitaku.xyz/golang/go5/"/>
-        <content type="html">&lt;h1 id=&#34;函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h1&gt;
-&lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
-&lt;figure class=&#34;highlight go&#34;&gt;&lt;figcaption data-lang=&#34;go&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;fmt&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; y &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; y&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; b &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Scanln&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;go 语言函数的定义格式如下:&lt;/p&gt;
-&lt;figure class=&#34;highlight go&#34;&gt;&lt;figcaption data-lang=&#34;go&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;funcName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;param &lt;span class=&#34;token keyword&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; returnType &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    code&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;func&lt;/code&gt;  为关键字，go 语言中使用 func 定义函数 &lt;br /&gt;
- &lt;code&gt;funcName&lt;/code&gt;  为函数名，推荐使用小驼峰写法 (下文介绍) &lt;br /&gt;
- &lt;code&gt;param&lt;/code&gt;  为参数名称， &lt;code&gt;type&lt;/code&gt;  为参数类型 &lt;br /&gt;
- &lt;code&gt;returnType&lt;/code&gt;  为函数返回值，不返回可以不写 &lt;br /&gt;
- &lt;code&gt;code&lt;/code&gt;  为代码块&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;smallFontOutput 就是小驼峰写法，即为首字母小写，其他单词的首字母大写&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;如果需要多个参数，把参数写为 &lt;code&gt;param type, param type&lt;/code&gt;  即可&lt;br /&gt;
- go 语言可以返回多个变量，如下:&lt;/p&gt;
-&lt;figure class=&#34;highlight go&#34;&gt;&lt;figcaption data-lang=&#34;go&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;fmt&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;swap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a &lt;span class=&#34;token builtin&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; b &lt;span class=&#34;token builtin&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; a&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hello&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;world&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;swap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;变量作用域&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#变量作用域&#34;&gt;#&lt;/a&gt; 变量作用域&lt;/h2&gt;
-&lt;figure class=&#34;highlight go&#34;&gt;&lt;figcaption data-lang=&#34;go&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;fmt&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 这里不可以用 c&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token comment&#34;&gt;// 这里可以用 c&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 这里不可以用 c&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这里的 c 就是局部变量，仅在函数内可用&lt;/p&gt;
-&lt;figure class=&#34;highlight go&#34;&gt;&lt;figcaption data-lang=&#34;go&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;fmt&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 所有地方都可以用&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这里的 c 是全局变量，整个文件内可用&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;闭包在后面会提及&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;defer语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#defer语句&#34;&gt;#&lt;/a&gt; defer 语句&lt;/h2&gt;
-&lt;p&gt;Go 语言中的 defer 语句会将语句推迟到函数退出时执行&lt;/p&gt;
-&lt;figure class=&#34;highlight go&#34;&gt;&lt;figcaption data-lang=&#34;go&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;fmt&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;start&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;defer&lt;/span&gt; fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	fmt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;end&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输出结果:&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;start&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="GO语言学习笔记" scheme="https://www.kaitaku.xyz/categories/golang/" />
-        <category term="go" scheme="https://www.kaitaku.xyz/tags/go/" />
-        <updated>2022-03-27T08:56:51.000Z</updated>
     </entry>
 </feed>
